@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Calvin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/login1.css">
+   <link rel="stylesheet" href="font/font.css">
+   
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+<style>
+	
+	.image-container {
+	  position: relative;
+	  display: inline-block;
+	}
+	.image-container:hover .overlay {
+	  display: block;
+	}
+	
+	.overlay {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: rgba(0, 0, 0, 0.8);
+	  display: none;
+	}
+	
+	.overlay img {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  max-width: 90%;
+	  max-height: 90%;
+	}
+	
+	
+	.image-container {
+	  display: flex; /* 使用flexbox布局 */
+	  justify-content: space-between; /* 图片之间的间距均分 */
+	}
+	
+	.image-container img {
+	  width: 50%; /* 图片宽度占容器的一半 */
+	}
+	@media screen and (max-width: 768px) {
+	  .column {
+	    width: 100%;
+	  }
+	  
+	  .image-container {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	    margin-top: 20px;
+	  }
+	  
+	  .overlay {
+	    display: none;
+	  }
+	}
+	</style>
+	
+<script>
+	var overlay = document.querySelector('.overlay');
+	var overlayzf = document.querySelector('.overlayzf');
+	var imageContainer = document.querySelector('.image-container');
+	
+	imageContainer.addEventListener('mouseenter', function() {
+	  overlay.style.display = 'block';
+	   overlayzf.style.display = 'block';
+	});
+	
+	imageContainer.addEventListener('mouseleave', function() {
+	  overlay.style.display = 'none';
+	   overlayzf.style.display = 'none';
+	});
+	</script>
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="row s-header__navigation">
+
+            <nav class="s-header__nav-wrap">
+
+                <h3 class="s-header__nav-heading h6">导航</h3>
+
+                <ul class="s-header__nav">
+                    <li class="current"><a href="index.html" title="">首页</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">内容分类</a>
+                        <ul class="sub-menu">
+                            <li><a href="category.html">Java</a></li>
+                            <li><a href="category.html">Java web</a></li>
+                            <li><a href="category.html">数据结构</a></li>
+                            <li><a href="category.html">Linux</a></li>
+                            <li><a href="category.html">更多</a></li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="blog-edit.html" title="">发布博客</a>
+						
+                    </li>
+                    <li><a href="styles.html" title="">主题风格</a></li>
+                    <li><a href="about.html" title="">关于</a></li>
+                    <li >
+                        <a href="myself.html" title="">我的</a>                   	
+                    </li>
+                </ul> <!-- end s-header__nav -->
+				
+	
+                <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
+
+            </nav> <!-- end s-header__nav-wrap -->
+
+        </div> <!-- end s-header__navigation -->
+
+        <a class="s-header__toggle-menu" href="#0" title="Menu"><span>菜单</span></a>
+
+        <div class="s-header__search">
+
+            <div class="s-header__search-inner">
+                <div class="row wide">
+
+                    <form role="search" method="get" class="s-header__search-form" action="#">
+                        <label>
+                            <span class="h-screen-reader-text">搜索...</span>
+                            <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for..." autocomplete="off">
+                        </label>
+                        <input type="submit" class="s-header__search-submit" value="Search"> 
+                    </form>
+
+                    <a href="#0" title="关闭搜索" class="s-header__overlay-close">关闭</a>
+
+                </div> <!-- end row -->
+            </div> <!-- s-header__search-inner -->
+
+        </div> <!-- end s-header__search wrap -->	
+ 
+       <!-- 登录功能实现 -->
+       <div class="s-header__login">	
+       	<a href="login.html"><img src="images/login.png" class="login_img" id="form-open"></a>
+		
+       </div>
+       
+       <a class="s-header__search-trigger" href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.982 17.983"><path fill="#010101" d="M12.622 13.611l-.209.163A7.607 7.607 0 017.7 15.399C3.454 15.399 0 11.945 0 7.7 0 3.454 3.454 0 7.7 0c4.245 0 7.699 3.454 7.699 7.7a7.613 7.613 0 01-1.626 4.714l-.163.209 4.372 4.371-.989.989-4.371-4.372zM7.7 1.399a6.307 6.307 0 00-6.3 6.3A6.307 6.307 0 007.7 14c3.473 0 6.3-2.827 6.3-6.3a6.308 6.308 0 00-6.3-6.301z"/></svg>
+       </a>
+    </header> <!-- end s-header -->
+
+
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+        <div class="row">
+            <div class="column large-12">
+
+                <article class="s-content__entry">
+
+                    <div class="s-content__media">
+                        <img src="images/thumbs/contact/contact-1050.jpg" 
+                                srcset="images/thumbs/contact/contact-2100.jpg 2100w, 
+                                        images/thumbs/contact/contact-1050.jpg 1050w, 
+                                        images/thumbs/contact/contact-525.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt="">
+                    </div> <!-- end s-content__media -->
+
+                    <div class="s-content__entry-header">
+                        <h1 class="s-content__title">Get In Touch With Us.</h1>
+                    </div> <!-- end s-content__entry-header -->
+
+                    <div class="s-content__primary">
+
+                        <div class="s-content__page-content">
+
+                            <p class="lead">
+                            Lorem ipsum Deserunt est dolore Ut Excepteur nulla occaecat magna occaecat Excepteur nisi esse veniam 
+                            dolor consectetur minim qui nisi esse deserunt commodo ea enim ullamco non voluptate consectetur minim 
+                            aliquip Ut incididunt amet ut cupidatat.
+                            </p> 
+
+                            <p>
+                            Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit 
+                            nisi est eu exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam 
+                            dolor dolor irure velit commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum 
+                            sit in tempor veniam consequat non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco 
+                            ut dolore culpa occaecat ut laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat 
+                            occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+                            </p>
+
+                            <br>
+
+                            <div class="row block-large-1-2 block-tab-full s-content__blocks">
+                                <div class="column">
+                                    <h4>在哪里找到我们</h4>
+                                    <p>
+                                    1600 圆形剧场大路<br>
+                                    山景城, CA<br>
+                                    94043 US
+                                    </p>
+                                </div>
+
+                                <div class="column">
+                                    <h4>联系方式</h4>
+                                    <p>
+                                    someone@yourdomain.com<br>
+                                    info@yourdomain.com <br>
+                                    Phone: (+63) 555 1212
+                                    </p> 
+                                </div>
+                            </div> <!-- end s-content__blocks -->
+
+                            <form name="cForm" id="cForm" class="s-content__form" method="post" action="">
+                                <fieldset>
+
+                                    <div class="form-field">
+                                        <input name="cName" type="text" id="cName" class="h-full-width h-remove-bottom" placeholder="姓名" value="">
+                                    </div>
+
+                                    <div class="form-field">
+                                        <input name="cEmail" type="text" id="cEmail" class="h-full-width h-remove-bottom" placeholder="邮箱" value="">
+                                    </div>
+
+                                    <div class="form-field">
+                                        <input name="cWebsite" type="text" id="cWebsite" class="h-full-width h-remove-bottom" placeholder="网站"  value="">
+                                    </div>
+
+                                    <div class="message form-field">
+                                        <textarea name="cMessage" id="cMessage" class="h-full-width" placeholder="信息" ></textarea>
+                                    </div>
+
+                                    <br>
+                                    <button type="submit" class="submit btn btn--primary h-full-width">提交</button>
+
+                                </fieldset>
+                            </form> <!-- end form -->
+
+                        </div> <!-- end s-entry__page-content -->
+
+                    </div> <!-- end s-content__primary -->
+                </article> <!-- end entry -->
+
+            </div> <!-- end column -->
+        </div> <!-- end row -->
+
+    </section> <!-- end s-content -->
+
+
+ <!-- footer
+     ================================================== -->
+     <footer class="s-footer">
+ 
+         <div class="s-footer__main">
+ 
+             <div class="row">
+ 
+                 <div class="column large-3 medium-6 tab-12 s-footer__info">
+ 
+                     <h5>关于我们的故事</h5>
+ 
+                     <p>
+                     Lorem ipsum Ut velit dolor Ut labore id fugiat in ut 
+                     fugiat nostrud qui in dolore commodo eu magna Duis 
+                     cillum dolor officia esse mollit proident Excepteur 
+                     exercitation nulla. Lorem ipsum In reprehenderit 
+                     commodo aliqua irure.
+                     </p>
+ 
+                 </div> <!-- end s-footer__info -->
+ 
+                 <div class="column large-2 medium-3 tab-6 s-footer__site-links">
+ 
+                     <h5>网站链接</h5>
+ 
+                     <ul>
+                         <li><a href="#0">关于我们</a></li>
+                         <li><a href="#0">博客</a></li>
+                         <li><a href="#0">常见问题</a></li>
+                         <li><a href="#0">条款</a></li>
+                         <li><a href="#0">隐私政策</a></li>
+                     </ul>
+ 
+                 </div> <!-- end s-footer__site-links -->  
+ 
+                 <div class="column large-2 medium-3 tab-6 s-footer__social-links">
+ 
+                     <h5>关注我们</h5>
+ 
+                     <ul>
+                         <li><a href="#0">Twitter</a></li>
+                         <li><a href="#0">Facebook</a></li>
+                         <li><a href="#0">Dribbble</a></li>
+                         <li><a href="#0">Pinterest</a></li>
+                         <li><a href="#0">Instagram</a></li>
+                     </ul>
+ 
+                 </div> <!-- end s-footer__social links --> 
+ 
+                 <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
+ 
+                     <h5>订阅通讯</h5>
+ 
+                     <p>注册以获取文章、访谈和活动的更新.</p>
+ 
+                     <div class="subscribe-form">
+                 
+                         <form id="mc-form" class="group" novalidate="true">
+ 
+                             <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="邮箱" required=""> 
+                 
+                             <input type="submit" name="subscribe" value="订阅" >
+                 
+                             <label for="mc-email" class="subscribe-message"></label>
+                 
+                         </form>
+ 
+                     </div>
+ 
+                 </div> <!-- end s-footer__subscribe -->
+ 
+             </div> <!-- end row -->
+ 
+         </div> <!-- end s-footer__main -->
+ 
+         <div class="s-footer__bottom">
+             <div class="row">
+                 <div class="column">
+                     <div class="ss-copyright">
+                         <span>© Copyright Calvin</span> 
+                         <span><a target="_blank" href="http://www.mobanwang.com/" title="Java">Java</a></span>
+                     </div> <!-- end ss-copyright -->
+                 </div>
+             </div> 
+ 
+             <div class="ss-go-top">
+                 <a class="smoothscroll" title="Back to Top" href="#top">
+                     <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                 </a>
+             </div> <!-- end ss-go-top -->
+         </div> <!-- end s-footer__bottom -->
+ 
+    </footer> <!-- end s-footer -->
+ 
+ 
+     <!-- Java Script
+     ================================================== -->
+     <script src="js/jquery-3.5.0.min.js"></script>
+     <script src="js/plugins.js"></script>
+     <script src="js/main.js"></script>
+ 
+ </body>
+ 
+ </html>

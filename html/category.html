@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>分类 - Calvin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header s-header--opaque">
+
+        <div class="s-header__logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="row s-header__navigation">
+
+            <nav class="s-header__nav-wrap">
+
+                <h3 class="s-header__nav-heading h6">导航</h3>
+
+                <ul class="s-header__nav">
+                    <li><a href="index.html" title="">首页</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">分类</a>
+                        <ul class="sub-menu">
+                            <li><a href="category.html">设计</a></li>
+                            <li><a href="category.html">生活方式</a></li>
+                            <li><a href="category.html">摄影</a></li>
+                            <li><a href="category.html">假期</a></li>
+                            <li><a href="category.html">工作</a></li>
+                            <li><a href="category.html">健康</a></li>
+                            <li><a href="category.html">家庭</a></li>
+                            <li><a href="category.html">关系</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="">博客</a>
+                        <ul class="sub-menu">
+                            <li><a href="single-video.html">发布视频</a></li>
+                            <li><a href="single-audio.html">发布音频</a></li>
+                            <li><a href="single-standard.html">发布文章</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="styles.html" title="">风格</a></li>
+                                <li class="current"><a href="about.html" title="">关于</a></li>
+                                <li><a href="contact.html" title="">联系</a></li>
+                            </ul> <!-- end s-header__nav -->
+                        
+                            <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">关闭</a>
+                        
+                        </nav> <!-- end s-header__nav-wrap -->
+                        
+                    </div> <!-- end s-header__navigation -->
+                        
+                    <a class="s-header__toggle-menu" href="#0" title="菜单"><span>菜单</span></a>
+                        
+                    <div class="s-header__search">
+                        
+                        <div class="s-header__search-inner">
+                            <div class="row wide">
+                        
+                                <form role="search" method="get" class="s-header__search-form" action="#">
+                                    <label>
+                                        <span class="h-screen-reader-text">搜索...</span>
+                                        <input type="search" class="s-header__search-field" placeholder="搜索..." value="" name="s" title="搜索..." autocomplete="off">
+                                    </label>
+                                    <input type="submit" class="s-header__search-submit" value="搜索">
+                                </form>
+                        
+                                <a href="#0" title="关闭搜索" class="s-header__overlay-close">关闭</a>
+                        
+                            </div> <!-- end row -->
+                        </div> <!-- s-header__search-inner -->
+                        
+                    </div> <!-- end s-header__search wrap -->
+					
+        <a class="s-header__search-trigger" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.982 17.983"><path fill="#010101" d="M12.622 13.611l-.209.163A7.607 7.607 0 017.7 15.399C3.454 15.399 0 11.945 0 7.7 0 3.454 3.454 0 7.7 0c4.245 0 7.699 3.454 7.699 7.7a7.613 7.613 0 01-1.626 4.714l-.163.209 4.372 4.371-.989.989-4.371-4.372zM7.7 1.399a6.307 6.307 0 00-6.3 6.3A6.307 6.307 0 007.7 14c3.473 0 6.3-2.827 6.3-6.3a6.308 6.308 0 00-6.3-6.301z"/></svg>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- content
+    ================================================== -->
+    <section class="s-content">
+
+
+        <!-- page header
+        ================================================== -->
+        <div class="s-pageheader">
+            <div class="row">
+                <div class="column large-12">
+                    <h1 class="page-title">
+                        <!-- <span class="page-title__small-type">分类</span> -->
+						<span class="page-title__small-type"></span>
+                        生活方式
+                    </h1>
+                </div>
+            </div>
+        </div> <!-- end s-pageheader-->
+        
+
+        <!-- masonry
+        ================================================== -->
+        <div class="s-bricks s-bricks--half-top-padding">
+
+            <div class="masonry">
+                <div class="bricks-wrapper h-group">
+
+                    <div class="grid-sizer"></div>
+
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/macbook-600.jpg" 
+                                     srcset="images/thumbs/masonry/macbook-600.jpg 1x, images/thumbs/masonry/macbook-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="#">需要为您的网站提供网页管理吗？</a></h1>
+                                
+                                <div class="entry__meta">
+                                    <span class="byline">作者：
+                                        <span class="author">
+                                            <a href="#">StyleShout</a>
+                                        </span>
+                                    </span>
+                                    
+                                    <span class="cat-links">
+                                        <a href="#">网站合作伙伴</a>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="entry__excerpt">
+                                <p>
+                                    需要托管服务吗？我们强烈推荐使用DreamHost。
+                                    享受百分之百内部支持、性能与稳定性保证、一键安装以及超直观的控制面板，轻松管理您的网站和项目。
+                                </p>
+                            </div>
+                            
+                            <a class="entry__more-link" href="#">了解更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+        
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/woodcraft-600.jpg" 
+                                     srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+        
+                       <div class="entry__text">
+                           <div class="entry__header">
+                               <h1 class="entry__title"><a href="single-standard.html">一个普通的简单博客文章。</a></h1>
+                               
+                               <div class="entry__meta">
+                                   <span class="byline">作者：
+                                       <span class="author">
+                                           <a href="#0">鸣人漩涡</a>
+                                       </span>
+                                   </span>
+                                   
+                                   <span class="cat-links">
+                                       <a href="#">设计</a> 
+                                       <a href="#">摄影</a>
+                                   </span>
+                               </div>
+                           </div>
+                           
+                           <div class="entry__excerpt">
+                               <p>
+                                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                               </p>
+                           </div>
+                           
+                           <a class="entry__more-link" href="#0">阅读更多</a>
+                       </div>
+        
+                    </article> <!-- end entry -->
+    
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/tulips-600.jpg" 
+                                     srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
+                            </a>
+                        </div>  <!-- end entry__thumb -->
+    
+                       <div class="entry__text">
+                           <div class="entry__header">
+                               <h1 class="entry__title"><a href="single-standard.html">关于咖啡因的10个有趣事实。</a></h1>
+                               
+                               <div class="entry__meta">
+                                   <span class="byline">作者：
+                                       <span class="author">
+                                           <a href="#0">志良·奈良</a>
+                                       </span>
+                                   </span>
+                                   
+                                   <span class="cat-links">
+                                       <a href="#">健康</a>
+                                   </span>
+                               </div>
+                           </div>
+                           
+                           <div class="entry__excerpt">
+                               <p>
+                                   Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                               </p>
+                           </div>
+                           
+                           <a class="entry__more-link" href="#0">阅读更多</a>
+                       </div>
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+        
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/grayscale-600.jpg" 
+                                     srcset="images/thumbs/masonry/grayscale-600.jpg 1x, images/thumbs/masonry/grayscale-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">5种灰度上色技术。</a></h1>
+                        
+                                <div class="entry__meta">
+                                    <span class="byline"">作者：
+                                        <span class='author'>
+                                            <a href="#0">宇智波骑</a>
+                                        </span>
+                                    </span>
+                                    <span class="cat-links">
+                                        <a href="#">设计</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                        
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/walk-600.jpg" 
+                                     srcset="images/thumbs/masonry/walk-600.jpg 1x, images/thumbs/masonry/walk-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">在摄影中使用重复和图案。</a></h1>
+                        
+                                <div class="entry__meta">
+                                    <span class="byline"">作者：
+                                        <span class='author'>
+                                            <a href="#0">鸣人</a>
+                                        </span>
+                                    </span>
+                                    <span class="cat-links">
+                                        <a href="#">工作</a>
+                                        <a href="#">生活方式</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                    </article> <!-- end article -->
+    
+                    <article class="brick entry" data-aos="fade-up">
+            
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/jump-600.jpg" 
+                                     srcset="images/thumbs/masonry/jump-600.jpg 1x, images/thumbs/masonry/jump-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+            
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">创造有意义的家庭时刻。</a></h1>
+                                
+                                <div class="entry__meta">
+                                    <span class="byline"">作者：
+                                        <span class='author'>
+                                            <a href="#0">鸣人·漩涡</a>
+                                    </span>
+                                </span>
+                                    <span class="cat-links">
+                                        <a href="#">家庭</a>
+                                        <a href="#">关系</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                            
+                    </article> <!-- end article -->
+    
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/real-600.jpg" 
+                                     srcset="images/thumbs/masonry/real-600.jpg 1x, images/thumbs/masonry/real-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <<div class="entry__text">
+    <div class="entry__header">
+        <h1 class="entry__title"><a href="single-standard.html">我们如何生活决定了我们是真实的。</a></h1>
+        
+        <div class="entry__meta">
+            <span class="byline"">作者：
+                <span class='author'>
+                    <a href="#0">漩涡鸣人</a>
+            </span>
+        </span>
+            <span class="cat-links">
+                <a href="#">旅行</a>
+                <a href="#">度假</a>
+            </span>
+        </div>
+    </div>
+    <div class="entry__excerpt">
+        <p>
+        Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+        </p>
+    </div>
+    <a class="entry__more-link" href="#0">阅读更多</a>
+</div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+    
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/lamp-600.jpg" 
+                                     srcset="images/thumbs/masonry/lamp-600.jpg 1x, images/thumbs/masonry/lamp-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                       <div class="entry__text">
+                           <div class="entry__header">
+                               <h1 class="entry__title"><a href="single-standard.html">现代设计中的对称性。</a></h1>
+                               
+                               <div class="entry__meta">
+                                   <span class="byline">作者：
+                                       <span class='author'>
+                                           <a href="#0">卡卡西·旗木</a>
+                                   </span>
+                               </span>
+                                   <span class="cat-links">
+                                       <a href="#">设计</a> 
+                                       <a href="#">摄影</a>
+                                   </span>
+                               </div>
+                           </div>
+                           <div class="entry__excerpt">
+                               <p>
+                               Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                               </p>
+                           </div>
+                           <a class="entry__more-link" href="#0">阅读更多</a>
+                       </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/clock-600.jpg" 
+                                     srcset="images/thumbs/masonry/clock-600.jpg 1x, images/thumbs/masonry/clock-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">高效管理时间的10个技巧</a></h1>
+                                
+                                <div class="entry__meta">
+                                    <span class="byline">作者：
+                                        <span class='author'>
+                                            <a href="#0">约翰·多伊</a>
+                                        </span>
+                                    </span>
+                                    <span class="cat-links">
+                                        <a href="#">生活方式</a> 
+                                        <a href="#">工作</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/beetle-600.jpg" 
+                                     srcset="images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">怀旧过去的美好时光</a></h1>
+                                
+                                <div class="entry__meta">
+                                    <span class="byline">作者：
+                                        <span class='author'>
+                                            <a href="#0">春野樱</a>
+                                        </span>
+                                    </span>
+                                    <span class="cat-links">
+                                        <a href="#">生活方式</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/phone-and-keyboard-600.jpg" 
+                                     srcset="images/thumbs/masonry/phone-and-keyboard-600.jpg 1x, images/thumbs/masonry/phone-and-keyboard-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">保持工作场所整洁的三个理由</a></h1>
+                        
+                                <div class="entry__meta">
+                                    <span class="byline">作者：
+                                        <span class='author'>
+                                            <a href="#0">春野樱</a>
+                                        </span>
+                                    </span>
+                                    <span class="cat-links">
+                                        <a href="#">工作</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                    <article class="brick entry" data-aos="fade-up">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="thumb-link">
+                                <img src="images/thumbs/masonry/seashore-600.jpg" 
+                                     srcset="images/thumbs/masonry/seashore-600.jpg 1x, images/thumbs/masonry/seashore-1200.jpg 2x" alt="">
+                            </a>
+                        </div> <!-- end entry__thumb -->
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h1 class="entry__title"><a href="single-standard.html">海滩对你的大脑有什么影响。</a></h1>
+                                
+                                <div class="entry__meta">
+                                    <span class="byline"">作者：
+                                        <span class='author'>
+                                            <a href="#0">漩涡鸣人</a>
+                                    </span>
+                                </span>
+                                    <span class="cat-links">
+                                        <a href="#">健康</a>
+                                        <a href="#">度假</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua cillum in consequat consequat in culpa in anim.
+                                </p>
+                            </div>
+                            <a class="entry__more-link" href="#0">阅读更多</a>
+                        </div>
+                        </div> <!-- end entry__text -->
+                    
+                    </article> <!-- end article -->
+
+                </div> <!-- end brick-wrapper -->
+
+            </div> <!-- end masonry -->
+
+            <div class="row">
+                <div class="column large-12">
+                    <nav class="pgn">
+                        <ul>
+                            <li>
+                                <span class="pgn__prev" href="#0">
+                                    上一页
+                                </span>
+                            </li>
+                            <li><a class="pgn__num" href="#0">1</a></li>
+                            <li><span class="pgn__num current">2</span></li>
+                            <li><a class="pgn__num" href="#0">3</a></li>
+                            <li><a class="pgn__num" href="#0">4</a></li>
+                            <li><a class="pgn__num" href="#0">5</a></li>
+                            <li><span class="pgn__num dots">…</span></li>
+                            <li><a class="pgn__num" href="#0">8</a></li>
+                            <li>
+                                <span class="pgn__next" href="#0">
+                                    下一页
+                                </span>
+                            </li>
+                        </ul>
+                    </nav> <!-- end pgn -->
+                </div> <!-- end column -->
+            </div> <!-- end row -->
+
+        </div> <!-- end s-bricks -->
+
+    </section> <!-- end s-content -->
+
+
+  <!-- footer
+      ================================================== -->
+      <footer class="s-footer">
+  
+          <div class="s-footer__main">
+  
+              <div class="row">
+  
+                  <div class="column large-3 medium-6 tab-12 s-footer__info">
+  
+                      <h5>关于我们的故事</h5>
+  
+                      <p>
+                      Lorem ipsum Ut velit dolor Ut labore id fugiat in ut 
+                      fugiat nostrud qui in dolore commodo eu magna Duis 
+                      cillum dolor officia esse mollit proident Excepteur 
+                      exercitation nulla. Lorem ipsum In reprehenderit 
+                      commodo aliqua irure.
+                      </p>
+  
+                  </div> <!-- end s-footer__info -->
+  
+                  <div class="column large-2 medium-3 tab-6 s-footer__site-links">
+  
+                      <h5>网站链接</h5>
+  
+                      <ul>
+                          <li><a href="#0">关于我们</a></li>
+                          <li><a href="#0">博客</a></li>
+                          <li><a href="#0">常见问题</a></li>
+                          <li><a href="#0">条款</a></li>
+                          <li><a href="#0">隐私政策</a></li>
+                      </ul>
+  
+                  </div> <!-- end s-footer__site-links -->  
+  
+                  <div class="column large-2 medium-3 tab-6 s-footer__social-links">
+  
+                      <h5>关注我们</h5>
+  
+                      <ul>
+                          <li><a href="#0">Twitter</a></li>
+                          <li><a href="#0">Facebook</a></li>
+                          <li><a href="#0">Dribbble</a></li>
+                          <li><a href="#0">Pinterest</a></li>
+                          <li><a href="#0">Instagram</a></li>
+                      </ul>
+  
+                  </div> <!-- end s-footer__social links --> 
+  
+                  <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
+  
+                      <h5>订阅通讯</h5>
+  
+                      <p>注册以获取文章、访谈和活动的更新.</p>
+  
+                      <div class="subscribe-form">
+                  
+                          <form id="mc-form" class="group" novalidate="true">
+  
+                              <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="邮箱" required=""> 
+                  
+                              <input type="submit" name="subscribe" value="订阅" >
+                  
+                              <label for="mc-email" class="subscribe-message"></label>
+                  
+                          </form>
+  
+                      </div>
+  
+                  </div> <!-- end s-footer__subscribe -->
+  
+              </div> <!-- end row -->
+  
+          </div> <!-- end s-footer__main -->
+  
+          <div class="s-footer__bottom">
+              <div class="row">
+                  <div class="column">
+                      <div class="ss-copyright">
+                          <span>© Copyright Calvin</span> 
+                          <span><a target="_blank" href="http://www.mobanwang.com/" title="Java">Java</a></span>
+                      </div> <!-- end ss-copyright -->
+                  </div>
+              </div> 
+  
+              <div class="ss-go-top">
+                  <a class="smoothscroll" title="Back to Top" href="#top">
+                      <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                  </a>
+              </div> <!-- end ss-go-top -->
+          </div> <!-- end s-footer__bottom -->
+  
+     </footer> <!-- end s-footer -->
+  
+  
+      <!-- Java Script
+      ================================================== -->
+      <script src="js/jquery-3.5.0.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+  
+  </body>
+  
+  </html>

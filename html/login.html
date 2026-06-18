@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> 登录注册 </title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+	  <!-- <img src="../images/2.jpg" alt=""> -->
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="images/login_images/1.jpg" alt="">
+        <div class="text">
+          <span class="text-1">每一个新朋友是一场 <br> 新的冒险</span>
+          <span class="text-2">让我们开始联系吧！</span>
+        </div>
+      </div>
+      <div class="back">
+        <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">登录</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+				<!-- <i class="fas fa-user"></i> -->
+                <input type="text" placeholder="输入你的邮箱" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="输入你的密码" required>
+              </div>
+			  <div class="input-box">
+			    <input type="checkbox" id="remember-me">
+			    <label for="remember-me" class="remember-me">记住密码</label>
+				<div class="text"><a href="#" style="color: black;">忘记密码？</a></div>
+			  </div>
+              
+              <div class="button input-box">
+                <input type="submit" value="登录">
+              </div>
+              <div class="text sign-up-text">没有账号？ <label for="flip">注册</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">注册</div>
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="输入你的名字" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="输入你的邮箱" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="输入你的密码" id="input-password" required>
+              </div>
+			  <div class="input-box">
+			    <i class="fas fa-lock"></i>
+			    <input type="password" placeholder="确认密码" id="confirm-password" required>
+			  </div>
+			  <div class="password-strength">
+			    <progress value="0" max="100" id="password-strength-bar"></progress>
+				<span id="password-strength-text">&nbsp;&nbsp;密码安全程度：</span>
+			  </div>
+              <div class="button input-box">
+                <input type="submit" value="注册">
+              </div>
+              <div class="text sign-up-text">已经有账号？ <label for="flip">登录</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 密码强度计算逻辑（你可以根据具体需求调整）
+      let passwordInput = document.getElementById('input-password');
+      if (passwordInput) {
+        passwordInput.addEventListener('input', function () {
+			console.log('Input event triggered'); 
+          let password = passwordInput.value;
+          let strengthBar = document.getElementById('password-strength-bar');
+          let strengthText = document.getElementById('password-strength-text');
+  
+          let strength = 0;
+          if (password.match(/[a-zA-Z0-9]+/)) {
+            strength += 1;
+          }
+          if (password.match(/[~!@#$%^&*()_+{}":;'<>?/\-=[\]\\]+/)) {
+            strength += 1;
+          }
+          if (password.length >= 8) {
+            strength += 1;
+          }
+  
+          switch (strength) {
+            case 1:
+              strengthBar.value = 33;
+              strengthText.innerHTML = '密码安全程度：弱';
+              break;
+            case 2:
+              strengthBar.value = 66;
+              strengthText.innerHTML = '密码安全程度：中';
+              break;
+            case 3:
+              strengthBar.value = 100;
+              strengthText.innerHTML = '密码安全程度：强';
+              break;
+            default:
+              strengthBar.value = 0;
+              strengthText.innerHTML = '密码安全程度：';
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

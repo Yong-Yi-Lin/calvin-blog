@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Calvin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> -->
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/login1.css">
+	<link rel="stylesheet" href="font/font.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader"> 
+    	<div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="row s-header__navigation">
+
+            <nav class="s-header__nav-wrap">
+
+                <h3 class="s-header__nav-heading h6">导航</h3>
+
+                <ul class="s-header__nav">
+                    <li class="current"><a href="index.html" title="">首页</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">分类</a>
+                        <ul class="sub-menu">
+                            <li><a href="category.html">设计</a></li>
+                            <li><a href="category.html">生活方式</a></li>
+                            <li><a href="category.html">摄影</a></li>
+                            <li><a href="category.html">假期</a></li>
+                            <li><a href="category.html">工作</a></li>
+                            <li><a href="category.html">健康</a></li>
+                            <li><a href="category.html">家庭</a></li>
+                            <li><a href="category.html">关系</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="">博客</a>
+                        <ul class="sub-menu">
+                            <li><a href="single-video.html">发布视频</a></li>
+                            <li><a href="single-audio.html">发布音频</a></li>
+                            <!-- <li><a href="single-standard.html">发布文章</a></li> -->
+							<li><a href="blog-list.html">发布文章</a></li>
+							<li><a href="myself.html">我的</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="styles.html" title="">风格</a></li>
+                    <li><a href="about.html" title="">关于</a></li>
+                    <li><a href="contact.html" title="">联系</a></li>
+                </ul> <!-- end s-header__nav -->
+
+                <a href="#0" title="Close Menu" class="s-header__overlay-close close-mobile-menu">Close</a>
+
+            </nav> <!-- end s-header__nav-wrap -->
+
+        </div> <!-- end s-header__navigation -->
+
+        <a class="s-header__toggle-menu" href="#0" title="Menu"><span>菜单</span></a>
+
+        <div class="s-header__search">
+
+            <div class="s-header__search-inner">
+                <div class="row wide">
+
+                    <form role="search" method="get" class="s-header__search-form" action="#">
+                        <label>
+                            <span class="h-screen-reader-text">搜索...</span>
+                            <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for..." autocomplete="off">
+                        </label>
+                        <input type="submit" class="s-header__search-submit" value="Search"> 
+                    </form>
+
+                    <a href="#0" title="关闭搜索" class="s-header__overlay-close">关闭</a>
+
+                </div> <!-- end row -->
+            </div> <!-- s-header__search-inner -->
+
+        </div> <!-- end s-header__search wrap -->	
+
+		<!-- 登录功能实现 -->
+		<div class="s-header__login">	
+			<a href="login.html"><img src="images/login.png" class="login_img" id="form-open"></a>
+		</div>
+		
+        <a class="s-header__search-trigger" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.982 17.983"><path fill="#010101" d="M12.622 13.611l-.209.163A7.607 7.607 0 017.7 15.399C3.454 15.399 0 11.945 0 7.7 0 3.454 3.454 0 7.7 0c4.245 0 7.699 3.454 7.699 7.7a7.613 7.613 0 01-1.626 4.714l-.163.209 4.372 4.371-.989.989-4.371-4.372zM7.7 1.399a6.307 6.307 0 00-6.3 6.3A6.307 6.307 0 007.7 14c3.473 0 6.3-2.827 6.3-6.3a6.308 6.308 0 00-6.3-6.301z"/></svg>
+        </a>
+		
+    </header> <!-- end s-header -->
+
+    <!-- hero
+    ================================================== -->
+   <section id="hero" class="s-hero">
+
+        <div class="s-hero__slider">
+
+            <div class="s-hero__slide">
+
+                <div class="s-hero__slide-bg" style="background-image: url('images/slide5-bg-3000.jpg');"></div>
+
+                <div class="row s-hero__slide-content animate-this">
+                    <div class="column">
+                        <div class="s-hero__slide-meta">
+                            <span class="cat-links">
+                                <a href="#0">生活方式</a>
+                                <a href="#0">设计</a>
+                            </span>
+                            <span class="byline"> 
+                                作者 
+                                <span class="author">
+                                    <a href="#0">Jonathan Doe</a>
+                                </span>
+                            </span>
+                        </div>
+                        <h1 class="s-hero__slide-text" style="font-family: font1;">
+                            <a href="#0" >
+								帮助您开始自由职业的提示和想法
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+
+           </div>  <!-- end s-hero__slide -->
+
+            <div class="s-hero__slide">
+
+                <div class="s-hero__slide-bg" style="background-image: url('images/slide2-bg-3000.jpg');"></div>
+
+                <div class="row s-hero__slide-content animate-this">
+                    <div class="column">
+                        <div class="s-hero__slide-meta">
+                            <span class="cat-links">
+                                <a href="#0">工作</a>
+                            </span>
+                            <span class="byline"> 
+                                作者 
+                                <span class="author">
+                                    <a href="#0">Juan Dela Cruz</a>
+                                </span>
+                            </span>
+                        </div>
+                        <h1 class="s-hero__slide-text">
+                            <a href="#0">
+                                极简主义：保持简单的艺术
+                            </a>
+                        </h1>
+                    </div>
+                </div> -->
+
+          </div> <!-- end s-hero__slide -->
+
+            <div class="s-hero__slide"">
+
+                <div class="s-hero__slide-bg" style="background-image: url('images/slide6-bg-3000.jpg');"></div>
+
+                <div class="row s-hero__slide-content animate-this">
+                    <div class="column">
+                        <div class="s-hero__slide-meta">
+                            <span class="cat-links">
+                                <a href="#0">健康</a>
+                                <a href="#0">生活方式</a>
+                            </span>
+                            <span class="byline"> 
+                                作者 
+                                <span class="author">
+                                    <a href="#0">Jane Doe</a>
+                                </span>
+                            </span>
+                        </div>
+                        <h1 class="s-hero__slide-text">
+                            <a href="#0">
+                                置身于大自然中对你有益的 10 个原因
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+
+            </div> <!-- end s-hero__slide -->
+
+        </div>   <!-- end s-hero__slider -->
+
+        <div class="s-hero__social hide-on-mobile-small">
+            <p>分享</p>
+            <span></span>
+            <ul class="s-hero__social-icons">
+                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
+            </ul>
+        </div> <!-- end s-hero__social -->
+
+        <div class="nav-arrows s-hero__nav-arrows">
+            <button class="s-hero__arrow-prev">
+                <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M1.5 7.5l4-4m-4 4l4 4m-4-4H14" stroke="currentColor"></path></svg>
+            </button>
+            <button class="s-hero__arrow-next">
+               <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M13.5 7.5l-4-4m4 4l-4 4m4-4H1" stroke="currentColor"></path></svg>
+            </button>
+        </div> <!-- end s-hero__arrows -->
+
+    </section> <!-- end s-hero -->
+
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__main">
+
+            <div class="row">
+
+                <div class="column large-3 medium-6 tab-12 s-footer__info">
+
+                    <h5>关于我们的故事</h5>
+
+                    <p>
+                    Lorem ipsum Ut velit dolor Ut labore id fugiat in ut 
+                    fugiat nostrud qui in dolore commodo eu magna Duis 
+                    cillum dolor officia esse mollit proident Excepteur 
+                    exercitation nulla. Lorem ipsum In reprehenderit 
+                    commodo aliqua irure.
+                    </p>
+
+                </div> <!-- end s-footer__info -->
+
+                <div class="column large-2 medium-3 tab-6 s-footer__site-links">
+
+                    <h5>网站链接</h5>
+
+                    <ul>
+                        <li><a href="#0">关于我们</a></li>
+                        <li><a href="#0">博客</a></li>
+                        <li><a href="#0">常见问题</a></li>
+                        <li><a href="#0">条款</a></li>
+                        <li><a href="#0">隐私条款</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__site-links -->  
+
+                <div class="column large-2 medium-3 tab-6 s-footer__social-links">
+
+                    <h5>关注我们</h5>
+
+                    <ul>
+                        <li><a href="#0">Twitter</a></li>
+                        <li><a href="#0">Facebook</a></li>
+                        <li><a href="#0">Dribbble</a></li>
+                        <li><a href="#0">Pinterest</a></li>
+                        <li><a href="#0">Instagram</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__social links --> 
+
+                <div class="column large-3 medium-6 tab-12 s-footer__subscribe">
+
+                    <h5>订阅通讯</h5>
+
+                    <p>注册以获取文章、访谈和活动的更新.</p>
+
+                    <div class="subscribe-form">
+                
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="邮箱" required=""> 
+                
+                            <input type="submit" name="subscribe" value="订阅" >
+                
+                            <label for="mc-email" class="subscribe-message"></label>
+                
+                        </form>
+
+                    </div>
+
+                </div> <!-- end s-footer__subscribe -->
+
+            </div> <!-- end row -->
+
+        </div> <!-- end s-footer__main -->
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="column">
+                    <div class="ss-copyright">
+                        <span>© Copyright Calvin</span> 
+                        <span><a target="_blank" href="http://www.mobanwang.com/" title="Java">Java</a></span>
+                    </div> <!-- end ss-copyright -->
+                </div>
+            </div> 
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M7.5 1.5l.354-.354L7.5.793l-.354.353.354.354zm-.354.354l4 4 .708-.708-4-4-.708.708zm0-.708l-4 4 .708.708 4-4-.708-.708zM7 1.5V14h1V1.5H7z" fill="currentColor"></path></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+        </div> <!-- end s-footer__bottom -->
+
+   </footer> <!-- end s-footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+	<!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>
