@@ -1,0 +1,25 @@
+.fa:hover{
+  transform:scale(1.5,1.5);
+}
+
+.fa-clock {
+  color: #bcbcbc; /* 默认颜色 */
+}
+
+.fa-heart {
+  color: #bcbcbc; /* 默认颜色 */
+}
+
+
+.fa-paper-plane {
+  color: #bcbcbc; /* 默认颜色 */
+}
+.share-icon-blue{
+  color: blue;
+}
+.fa-thumbs-up {
+  color: #bcbcbc; /* 默认颜色 */
+}
+.fa.fa-thumbs-up.liked {
+  color: red;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>帮助中心</title>
+	<!-- favicons
+    ================================================== -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<!-- CSS
+        ================================================== -->
+	<link rel="stylesheet" href="css/Q&A.css">
+	<link rel="stylesheet" href="css/loading.css">
+	<!-- script
+    ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script defer src="js/fontawesome/all.min.js"></script>
+	<script src="js/loading.js"></script>
+	<script src="js/Q&A.js"></script>
+	<!-- 2D LIVE -->
+	<script type="text/javascript" charset="utf-8" async=""
+			src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js">
+	</script>
+
+	<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js?_=1557308476616">		</script>
+
+	<script type="text/javascript">
+		L2Dwidget.init();
+	</script>
+
+</head>
+<body>
+<!-- loading.html -->
+<!-- <div id="modal-overlay" class="modal-overlay">
+   <div class="sk-cube-grid">
+     <div class="sk-cube sk-cube-1"></div>
+     <div class="sk-cube sk-cube-2"></div>
+     <div class="sk-cube sk-cube-3"></div>
+     <div class="sk-cube sk-cube-4"></div>
+     <div class="sk-cube sk-cube-5"></div>
+     <div class="sk-cube sk-cube-6"></div>
+     <div class="sk-cube sk-cube-7"></div>
+     <div class="sk-cube sk-cube-8"></div>
+     <div class="sk-cube sk-cube-9"></div>
+     <p>Loading.....</p>
+   </div>
+ </div> -->
+
+
+
+<div class="s-header__logo">
+	<a class="logo" href="index.html">
+		<img src="images/logo.svg" alt="主页">
+	</a>
+</div>
+
+<div class="container">
+	<div class="sidebar">
+		<ul>
+			<li><a href="#" onclick="showContent('section1')">如何注册用户？</a></li>
+			<li><a href="#" onclick="showContent('section2')">如何查看自己的文章？</a></li>
+			<li><a href="#" onclick="showContent('section3')">为什么点击我的和发布文章点不开？</a></li>
+			<li><a href="#" onclick="showContent('section4')">怎么能够看更多的文章内容</a></li>
+			<li><a href="#" onclick="showContent('section5')">文章入口在哪里？</a></li>
+			<li><a href="#" onclick="showContent('section6')">关于首页和主页的区别</a></li>
+			<li><a href="#" onclick="showContent('section7')">如何更换头像</a></li>
+			<li><a href="#" onclick="showContent('section8')">退出用户</a></li>
+			<li><a href="#" onclick="showContent('section9')">为什么注册后还是不可以评论</a></li>
+			<li><a href="#" onclick="showContent('section10')">昵称是什么？</a></li>
+			<li><a href="#" onclick="showContent('section11')">评分功能是用来干什么</a></li>
+			<li><a href="#" onclick="showContent('section12')">如何应对文章侵权</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		<h1>帮助中心</h1>
+		<p>点击选择需要回答的疑问</p>
+		<section id="section1" class="hidden">
+			<h2>如何注册用户？</h2>
+			<p>首页中的导航条右上方有一个图标点击，就会跳转到登录和注册的页面</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA01.png">
+		</section>
+		<section id="section2" class="hidden">
+			<h2>如何查看自己的文章？</h2>
+			<p>登录成功之后点击头部导航条中的我的，转跳到个人主页主页中的中的动态分类就是自己写的文章</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA021.png">
+			<img style="max-width: 500px; height: auto;" src="images/QA022.png">
+		</section>
+		<section id="section3" class="hidden">
+			<h2>为什么点击我的和发布文章点不开？</h2>
+			<p>需要打开登录或者注册用户才可以实现功能的使用</p>
+		</section>
+		<section id="section4" class="hidden">
+			<h2>怎么能够看更多的文章内容</h2>
+			<p>点击导航条中的所有内容即可</p>
+		</section>
+		<section id="section5" class="hidden">
+			<h2>文章入口在哪里？</h2>
+			<p>点击阅读更多内容就可以看到文章内容</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA041.png">
+			<img style="max-width: 500px; height: auto;" src="images/QA042.png">
+		</section>
+		<section id="section6" class="hidden">
+			<h2>关于首页和主页的区别</h2>
+			<p>首页</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA052.png">
+			<p>主页</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA051.png">
+		</section>
+		<section id="section7" class="hidden">
+			<h2>如何更换头像</h2>
+			<p>在个人主页中点击资料编辑就要更换头像</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA071.png">
+			<img style="max-width: 500px; height: auto;" src="images/QA072.png">
+		</section>
+		<section id="section8" class="hidden">
+			<h2>退出用户</h2>
+			<p>点击我的跳转页面在导航条右侧有个退出用户的功能按键</p>
+		</section>
+		<section id="section9" class="hidden">
+			<h2>为什么注册后还是不可以评论</h2>
+			<p>请重新登录</p>
+		</section>
+		<section id="section10" class="hidden">
+			<h2>昵称是什么？</h2>
+			<p>是用户区别对方的一种方式</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA071.png">
+		</section>
+		<section id="section11" class="hidden">
+			<h2>评分功能是用来干什么</h2>
+			<p>有利于创造者对访问者对该网站满意度的了解</p>
+			<img style="max-width: 500px; height: auto;" src="images/QA101.png">
+		</section>
+		<section id="section12" class="hidden">
+			<h2>如何应对文章侵权</h2>
+			<p>将详情内容发送到1605853577@qq.com我们将会给出相应的方案</p>
+		</section>
+
+	</div>
+	<div id="return-button">
+		<button class="return-btn" onclick="goToHomePage()">返回首页</button>
+	</div>
+</div>
+<!-- Java Script
+================================================== -->
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

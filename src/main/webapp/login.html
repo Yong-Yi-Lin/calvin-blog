@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> 登录注册 </title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="css/loading.css">
+
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<script>
+    "use strict";(function(h,d){var g=typeof d==="string"?document.querySelector(d):d,f=g.getBoundingClientRect(),c=f.width,l=f.height,n=g.getContext("2d"),j={x:c/2,y:l/2,radius:180},k=40,e=60,a=[],b;g.width=c;g.height=l;h.raf=h.requestAnimationFrame||webkitRequestAnimationFrame||function(p){return setTimeout(p,1000/60);};h.caf=h.cancelAnimationFrame||webkitCancelAnimationFrame||function(p){clearTimeout(p);};Function.prototype.method=function(q,p){return this.prototype[q]=p,this;};function i(p,r,q){this.x=this.ox=p;this.y=this.oy=r;this.radius=Math.random()*1+2;this.timer=q|0;}i.method("draw",function(p,v,r){var s=this.closest,q,u,t=this.getAlpha(r);if(t>0){p.fillStyle=p.strokeStyle="rgba(156,217,249,"+t+")";p.beginPath();p.arc(this.x,this.y,this.radius,0,Math.PI*2,true);p.closePath();p.fill();if(s){q=s.length;while(q--){u=v[s[q]];p.beginPath();p.moveTo(this.x,this.y);p.lineTo(u.x,u.y);p.stroke();}}}if(this._isMove){this.move();return;}if(this.timer++===this._moveFrames){this.setMove();}}).method("setMove",function(){this._isMove=true;this._frames=Math.random()*100+120;this._frame=0;this._tx=this.ox+Math.random()*100-50;this._ty=this.oy+Math.random()*100-50;}).method("move",function(){this.x=this.ease(this._frame++,this.x,this._tx-this.x,this._frames);this.y=this.ease(this._frame,this.y,this._ty-this.y,this._frames);if(Math.abs(this.x-this._tx)<0.5&&Math.abs(this.y-this._ty)<0.5){this._isMove=false;this.timer=0;}}).method("getAlpha",function(s){var q=this.x-s.x,p=this.y-s.y,u=Math.sqrt(q*q+p*p),t=s.radius;return u>t?0:(1-u/t)*0.6;}).method("ease",function(q,p,s,r){if((q/=r/2)<1){return s/2*q*q+p;}return -s/2*((--q)*(q-2)-1)+p;}).method("_moveFrames",e);function m(){var q=Math.max(60,c*1.5/k),t=l*1.5/q+0.5|0,v,r=0,s,u,p;v=c/q+0.5|0;for(;r<t;r++){for(s=0;s<v;s++){u=new i(s*q+(Math.random()*q*2-q),r*q+(Math.random()*q*2-q),Math.random()*e);p=r*v+s;a[p]=u;if(r&1&&s&&1){u.closest=[p-1,p-v,p-v-1];s<v-1&&u.closest.push(p+1);r<t-1&&u.closest.push(p+v);}}}o();}function o(){n.clearRect(0,0,c,l);a.forEach(function(r,q,p){r.draw(n,p,j);});b=raf(o);}g.addEventListener("mousemove",function(p){j.x=p.clientX-f.left;j.y=p.clientY-f.top;},false);h.addEventListener("resize",function(){caf(b);a=[];f=g.getBoundingClientRect();g.width=c=f.width;g.height=l=f.height;m();},false);m();})(this,document.querySelector(".stage"));
+</script>
+
+<body>
+
+<header class="l-header">
+    <ul class="l-header__nav">
+        <li ><a href="index.html" title="">返回首页</a></li>
+    </ul> <!-- end s-header__nav -->
+</header>
+<div id="logo">
+    <img src="img/logo.svg" alt="Homepage">
+</div>
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="./img/1.png" alt="">
+            <div class="text">
+                <span class="text-1">每一个新朋友是一场 <br> 新的冒险</span>
+                <span class="text-2">让我们开始联系吧！</span>
+            </div>
+        </div>
+        <div class="back">
+            <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+            <div class="text">
+                <span class="text-1">Complete miles of journey <br> with one step</span>
+                <span class="text-2">Let's get started</span>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="login-form">
+                <div class="title">登录</div>
+                <form action="#">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" id="email" placeholder="输入你的邮箱" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="输入你的密码" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me" class="remember-me">记住密码</label>
+                            <div class="text"><a href="forget.html" style="color: black;">忘记密码？</a></div>
+                        </div>
+
+                        <div class="button input-box">
+                            <input type="submit" onclick="loginOnclick()" value="登录">
+                        </div>
+                        <div class="text sign-up-text">没有账号？ <label for="flip">注册</label></div>
+                    </div>
+                </form>
+            </div>
+            <!-- 注册 -->
+            <div class="signup-form">
+                <div class="title">注册</div>
+                <form action="#">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="username" onchange="checkSame()" placeholder="输入你的名字" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" id="ZEmail" onchange="checkSame()" placeholder="输入你的邮箱" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="newPassword" placeholder="输入你的密码"  required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" onchange="checkSame()" placeholder="确认密码" id="confirm-password" required>
+                        </div>
+                        <div class="password-strength">
+                            <progress value="0" max="100" id="password-strength-bar"></progress>
+                            <span id="password-strength-text">&nbsp;&nbsp;密码安全程度：</span>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" onclick="enrolled()" value="注册">
+                        </div>
+                        <div class="text sign-up-text">已经有账号？ <label for="flip">登录</label></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="content_bottom">
+    <div>
+        <a href="about.html">关于我们</a>
+        <a href="index.html">博客</a>
+        <a href="Q&A.html">常见问题</a>
+        <a href="article.html">条款</a>
+        <a href="article.html">隐私条款</a>
+    </div>
+    <div>
+        <span >© 2023 Calvin</span>
+        <a href="#">粤 ICP 证 110745 号</a>
+        <img src="img/ga.png" alt="">
+        <a href="#">粤公网安备 11010802010035 号</a>
+        <a href="#">出版物经营许可证</a>
+    </div>
+    <div>
+        <a href="#">侵权举报</a>
+        <a href="#">网上有害信息举报专区</a>
+        <a href="#">儿童色情信息举报专区</a>
+        <span>违法和不良信息举报：010-82716601</span>
+    </div>
+</div>
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 密码强度计算逻辑（你可以根据具体需求调整）
+            let passwordInput = document.getElementById('newPassword');
+            if (passwordInput) {
+                passwordInput.addEventListener('input', function () {
+                    console.log('Input event triggered');
+                    let password = passwordInput.value;
+                    let strengthBar = document.getElementById('password-strength-bar');
+                    let strengthText = document.getElementById('password-strength-text');
+
+                    let strength = 0;
+                    if (password.match(/[a-zA-Z0-9]+/)) {
+                        strength += 1;
+                    }
+                    if (password.match(/[~!@#$%^&*()_+{}":;'<>?/\-=[\]\\]+/)) {
+                        strength += 1;
+                    }
+                    if (password.length >= 8) {
+                        strength += 1;
+                    }
+
+                    switch (strength) {
+                        case 1:
+                            strengthBar.value = 33;
+                            strengthText.innerHTML = '密码安全程度：弱';
+                            break;
+                        case 2:
+                            strengthBar.value = 66;
+                            strengthText.innerHTML = '密码安全程度：中';
+                            break;
+                        case 3:
+                            strengthBar.value = 100;
+                            strengthText.innerHTML = '密码安全程度：强';
+                            break;
+                        default:
+                            strengthBar.value = 0;
+                            strengthText.innerHTML = '密码安全程度：';
+                    }
+                });
+            }
+        });
+</script>
+<script src="js/util.js"></script>
+<script>
+    //绑定提交按钮点击事件
+    function loginOnclick(){
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+        //发送ajax请求，需要设置method，url，contentType，body
+        ajax({
+            method: "post",
+            url: "login?f=login",
+            contentType: "application/json",
+            body: JSON.stringify({
+                //冒号前是前后端约定的键，冒号后是变量值
+                email: email,
+                password: password
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        //alert("登陆成功");
+                        window.location.href = "blog.html";
+                    }else {
+                        alert("账号或密码错误");
+                    }
+                } else {
+                    alert("响应状态码："+status);
+                    window.location.href = '/'+this.url;
+                }
+            }
+        });
+    }
+
+    function enrolled(){
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#ZEmail").value;
+        let newPassword = document.querySelector("#newPassword").value;
+
+        ajax({
+            method: "post",
+            url: "login?f=enrolled",
+            contentType: "application/json",
+            body: JSON.stringify({
+                //冒号前是前后端约定的键，冒号后是变量值
+                username: username,
+                password: newPassword,
+                email: email
+            }),
+            callback: function (status, responseText) {
+                if (status == 200) {
+                    let json = JSON.parse(responseText);
+                    if (json.ok) {
+                        alert("注册成功");
+                        window.location.href = "login.html";
+                    } else {
+                        alert("账号或密码错误");
+                    }
+                } else {
+                    //alert("响应状态码："+status+"/nbody："+responseText);
+                    console.log("响应状态码：" + status + "/nbody：" + responseText)
+                }
+            }
+        });
+    }
+
+    function checkSame() {
+        let username = document.querySelector("#username").value;
+        let email = document.querySelector("#ZEmail").value;
+        let newPassword = document.querySelector("#newPassword").value;
+        let cp = document.querySelector("#confirmPassword").value;
+
+        if(newPassword != cp){
+            alert("输入的确认密码不一致！")
+        } else {
+            ajax({
+                method: "Post",
+                url: "CheckServlet",
+                contentType: "application/json",
+                body: JSON.stringify({
+                    username: username,
+                    email:email
+                }),
+                callback: function (status, responseText) {
+                    if (status == 200) {
+                        let json = JSON.parse(responseText);
+                        if (json.ok) {
+
+                        } else {
+                            alert("当前输入的内容已存在!");
+                        }
+                    } else {
+                        alert("响应状态码：" + status + "/nbody：" + responseText)
+                    }
+                }
+            });
+        }
+    }
+
+</script>
+</html>

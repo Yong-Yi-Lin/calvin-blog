@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑页面</title>
+    <link rel="stylesheet" href="css/common2.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="editor.md/css/editormd.min.css">
+    <link rel="stylesheet" href="css/blog-edit2.css">
+</head>
+<body>
+<div class="nav">
+    <div class="nav-left">
+        <a class="logo">
+            <img src="images/logo.svg" alt="Homepage" >
+        </a>
+    </div>
+    <div class="nav-right">
+        <img src="apple-touch-icon.png" class="ava-img">
+        <a><span class="username">我的博客</span></a>
+        <a href="my-homepage.html">主页</a>
+        <!--            <a href="blog_edit.html">写博客</a>-->
+        <a href="logout">退出账户</a>
+    </div>
+</div>
+<div id="edit-container">
+    <div id="edit-title">
+        <input type="text" id="title" placeholder="在这里写下文章标题" class="es-t" style="border: 1px solid #dedede">
+        <button onclick="OKEdit()">修改文章</button>
+    </div>
+    <div id="edit-content" style="border-radius: 4px">
+        <textarea id="content" style="display: none;"></textarea>
+    </div>
+</div>
+</body>
+<script src="js/util.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="editor.md/lib/marked.min.js"></script>
+<script src="editor.md/lib/prettify.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script>
+    let id = window.location.search.substring(4);
+    getBlogContent();
+
+    //获取文章的内容
+    function getBlogContent() {
+        let TElement = document.getElementById("title");
+        let avatarImg = document.querySelector(".ava-img");
+        let username = document.querySelector(".username");
+        // 使用Ajax请求获取博客内容
+        ajax({
+            method: "Get",
+            url: "blog_update?id="+id,
+            contentType: "application/json",
+            callback: function(status,responseText){
+                if (status == 200) {
+                    let json = JSON.parse(responseText);
+                    if (json.ok) {
+                        let data = json.data;
+                        let article = data.article;
+                        let content = article.content;
+                        let title = article.title;
+                        // editor.setMarkdown(article.content);
+
+                        //设置修改前的标题
+                        TElement.value=title;
+
+                        if(data.avatar!=null){
+                            avatarImg.src = data.avatar;
+                        }
+
+                        username.innerText = data.username;
+
+                        editor = editormd("edit-content", {
+                            width: "100%",
+                            height: "calc(100% - 50px)",
+                            markdown: content,
+                            path: "editor.md/lib/",
+                            saveHTMLToTextarea: true
+                        });
+                    } else {
+                        alert("ok == false");
+                    }
+                } else {
+                    alert("响应状态码：" + status + "/nbody：" + responseText);
+                }
+            }
+        })
+    }
+
+    //修改文章点击事件
+    function OKEdit(){
+        let title = document.querySelector("#title").value;
+        let content = document.querySelector("#content").value;
+        ajax({
+            method: "Post",
+            url: "blog_update?id="+id,
+            contentType: "application/json",
+            body: JSON.stringify({
+                title: title,
+                content: content
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("修改文章成功");
+                        window.location.href = "my-homepage.html";
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+
+    }
+</script>
+</html>

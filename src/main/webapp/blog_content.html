@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <img src="img/18.jpg">
+            <span>我的博客</span>
+        </div>
+        <div class="nav-right">
+            <a href="blog_list.html">主页</a>
+            <a href="blog_edit.html">写博客</a>
+            <a href="logout">注销</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <div class="card">
+                <img src="img/18.jpg">
+                <h3>X_H学Java</h3>
+                <a href="https://blog.csdn.net/qq_58710208?spm=1000.2115.3001.5343">MyCSDN地址</a>
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+                <div class="counter">
+                    <span id="count">2</span>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="detail">
+                <div class="title">第一篇博客</div>
+                <div class="date">2022-01-22</div>
+                <div class="desc">
+                    <p>希望大海风平浪静，却常常有狂风和恶浪。希望江河一泻千里，却常常有旋涡和急流，希望生活美满幸福，却常常有悲伤和忧愁。</p>
+                    <p>书籍好比一架梯子，它能引领人们登上文化的殿堂；书籍如同一把钥匙，它将帮助我们开启心灵的智慧之窗；书籍犹如一条小船，它会载着我们驶向知识的海洋。</p>
+                    <p>有一首诗最为动人，那就是青春；有一段人生最美丽，那就是青春；有一道风景最为亮丽，那就是青春。青春，不要说已疲惫，也许你的幻想曾被现实无情毁灭，也许你的追求毫无结果，但你应该相信，没有寒风的洗礼，哪来万紫千红的春天，没有心的耕耘，哪有累累硕果？</p>
+                    <p>虽然你现在还只是一株稚嫩的幼苗。然而只要坚韧不拔，终会成为参天大树；虽然你现在只是涓涓细流，然而只要锲而不舍，终会拥抱大海；虽然你现在只是一只雏鹰，然而只要心存高远，跌几个跟头之后，终会占有蓝天。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="editor.md/lib/marked.min.js"></script>
+<script src="editor.md/lib/prettify.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script src="js/util.js"></script>
+<script>
+    //window.location.search获取的是queryString？后的部分，blog_content?id=1
+    //也就是获取的是?id=1
+    let id = window.location.search.substring(4);
+    //页面一加载就需要展示博客详情页面，所以就发送ajax请求来获取内容
+    ajax({
+        method: "get",
+        url: "blog_content?id="+id,
+        callback: function(status,responseText){
+            if(status == 200){
+                let json = JSON.parse(responseText);
+                if(json.ok){
+                    let data = json.data;
+                    let nickname = data.nickname;
+                    let h3 = document.querySelector(".card>h3");
+                    h3.innerHTML = nickname;
+                    let num = data.count;
+                    let count = document.querySelector("#count");
+                    count.innerHTML = num;
+                    let article = data.article;
+                    let div = document.querySelector(".detail");
+                    let str = "";
+                    str += `<div class="title">`;
+                    str += article.title;
+                    str += `</div>`;
+                    str += `<div class="date">`;
+                    str += article.dateString;
+                    str += `</div>`;
+                    str += `<div id="article-content" class="desc">`;
+                    //str += article.content;
+                    str += `</div>`;
+                    div.innerHTML = str;
+                    //不能直接展示markdown源码，数据库保存的是markdown源码
+                    editormd.markdownToHTML("article-content",{markdown: article.content});
+                }else {
+                    alert("ok == false");
+                }
+            }else {
+                alert("响应状态码："+status+"/nbody："+responseText);
+            }
+        }
+    });
+</script>
+</html>

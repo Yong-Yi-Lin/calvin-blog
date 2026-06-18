@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calvin-分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS
+    ================================================== -->
+<link href="css/base.css" rel="stylesheet">
+<link href="css/m.css" rel="stylesheet">
+<link rel="stylesheet" href="css/login1.css">
+<link rel="stylesheet" href="font/font.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/star.css">
+
+  
+ <!-- script
+    ================================================== -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/comm.js"></script>
+   <script src="js/star.js"></script>
+
+ <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<style>
+.wrap {
+  display: flex;
+  background: white;
+  border: solid 2px lightblue;
+  width: 70%;
+  float: left;
+  padding-left: 0px;
+  border-radius: 10px;
+}
+
+.nav-wrap {
+  background-color: azure;
+  padding: 20px;
+  margin: 5px;
+  width: 25px;
+  height: 8px;
+  border: 1px solid gainsboro;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+a:hover{
+	color: red;
+}
+
+</style>
+<body>
+<header>
+<div class="box">
+
+<nav>
+<ul id="starlist">
+<div class="logo"><li><a href="index.html"><img src="images/logo.svg" alt="Homepage"></a></li></div>
+<li><a href="index.html">首页</a></li>
+<li class="menu"><a href="">所有内容</a>
+<ul class="sub">
+<li><a href="category.html">Java</a></li>
+    <li><a href="category.html">Java web</a></li>
+    <li><a href="category.html">数据结构</a></li>
+    <li><a href="category.html">Linux</a></li>
+    <li><a href="more.html">更多</a></li>
+</ul>
+<li >
+<a href="blog-edit.html" title="">发布博客</a>
+</li>
+<li><a href="about.html" title="">关于</a></li>
+ <li ><a href="blog-list.html" title="">我的</a> </li>
+ </ul>                                          	
+                    
+                                   
+
+
+<h2 id="mnavh"><span class="navicon"></span></h2>
+<div class="is-search"> <i></i> </div>
+<div class="search-page">
+<div class="search_box">
+<div class="go-left"></div>
+<div class="search">
+<form action="" method="post" name="searchform" id="searchform">
+<input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onFocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onBlur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+<input name="show" value="title" type="hidden">
+<input name="tempid" value="1" type="hidden">
+<input name="tbname" value="news" type="hidden">
+<input name="Submit" class="input_submit" value="搜索" type="submit">
+</form>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<!-- main -->
+
+<div class="box">
+	<div class="ph_margin">
+		<div class="wrap" >
+			<div class="nav-wrap"><a href="blog.html">全部</a></div>
+			<div class="nav-wrap"><a href="blog.html">Java</a></div>
+			<div class="nav-wrap"><a href="blog.html">Tomcat</a></div>
+			<div class="nav-wrap"><a href="blog.html">maven</a></div>
+			<div class="nav-wrap"><a href="blog.html">spring</a></div>
+			<div class="nav-wrap"><a href="blog.html">Javaee</a></div>
+			<div class="nav-wrap"><a href="blog.html">servlet</a></div>
+			<div class="nav-wrap"><a href="blog.html">eclipse</a></div>
+			</div>
+	</div>
+<div class="blogs">
+<div class="weizhi">您当前的位置：<a href="">首页</a>&nbsp;&gt;&nbsp;<a href="/">Java</a></div>
+
+ 
+ <ul>
+	<!-- 内容part -->
+<li class="blogs_list"> <a href="essay.html" target="_blank"><i> <img src="images/Linux.png"></i>
+<h2>Linux：20个linux常用命令</h2>
+</a>
+<p>20个linux常用命令
+1. ls：列出文件list
+2. cd：切换目录change directory
+3. cp：复制copy
+4. mv：移动move
+</p>
+<div class="blogs_base"><span class="blogs_time">2021-05-06</span><span class="blogs_onclick">956</span></div>
+<a href="essay.html" target="_blank" class="read_more">阅读更多</a> </li>
+<!-- 内容part -->
+<li class="blogs_list"> <a href="essay.html" target="_blank"><i><img src="images/Java.png" ></i>
+<h2>Java 数据结构篇-实现二叉搜索树的核心方法</h2>
+</a>
+<p> 由于其特性，二叉搜索树在插入、删除和搜索操作上具有较高的效率。在平均情况下，这些操作的时间复杂度为 O(log n)，其中 n 为树中节点的数量。然而，如果树的结构不平衡，最坏情况下这些操作的时间复杂度可能会达到 O(n)。</p>
+<div class="blogs_base"><span class="blogs_time">2021-04-06</span><span class="blogs_onclick">731</span></div>
+<a href="essay.html" target="_blank" class="read_more">阅读更多</a> </li>
+<!-- 内容part -->
+<li class="blogs_list"> <a href="essay.html" target="_blank"><i><img src="images/Java.png" ></i>
+<h2>Java连接Mysql报错：javax.net.ssl.SSLException: Received fatal alert: internal_error</h2>
+</a>
+<p>解决方案：
+
+1、jdbc连接后面加useSSL=false （未成功）
+
+2、关闭mysql的SSL（成功解决）
+
+在MySQL配置文件（/etc/my.conf）中添加disable_ssl和skip_ssl参数，如下：
+
+</p>
+<div class="blogs_base"><span class="blogs_time">2021-03-26</span><span class="blogs_onclick">96</span></div>
+<a href="essay.html" target="_blank" class="read_more">阅读更多</a> </li>
+<!-- 内容part -->
+<li class="blogs_list"> <a href="essay.html" target="_blank"><i><img src="images/Linux.png" ></i>
+<h2>如何远程登录Linux！</h2>
+</a>
+<p>第一步：在Linux上查看SSH的工作状态：打开Linux终端，输入systemctl status sshd，如图所示，红色方框里的内容说明你安装了SSH并且正在工作；</p>
+<div class="blogs_base"><span class="blogs_time">2021-02-13</span><span class="blogs_onclick">921</span></div>
+<a href="essay.html" target="_blank" class="read_more">阅读更多</a> </li>
+<!-- 内容part -->
+<li class="blogs_list"> <a href="essay.html" target="_blank"><i><img src="images/深度学习.png" ></i>
+<h2>深度学习知识点全面总结</h2>
+</a>
+<p>1.深度学习定义
+深度学习定义：一般是指通过训练多层网络结构对未知数据进行分类或回归
+
+深度学习分类：有监督学习方法——深度前馈网络、卷积神经网络、循环神经网络等；
+
+ 无监督学习方法——深度信念网、深度玻尔兹曼机，深度自编码器等。
+</p>
+<div class="blogs_base"><span class="blogs_time">2021-05-06</span><span class="blogs_onclick">956</span></div>
+<a href="essay.html" target="_blank" class="read_more">阅读更多</a> </li>
+
+
+<div class="epages"><a title="Total record">&nbsp;<b>92</b> </a>&nbsp;&nbsp;&nbsp;<b>1</b>&nbsp;<a href="blog.html">2</a>&nbsp;<a href="/">3</a>&nbsp;<a href="/">4</a>&nbsp;<a href="/">下一页</a>&nbsp;<a href="/">尾页</a></div>
+</div>
+<!-- 内容part end -->
+<!-- 侧栏推荐 -->
+<aside class="rbox">
+<div class="isgood_news">
+<h2 class="h_title">站长推荐</h2>
+<ul>
+<li><a href="essay.html" title="" target="_blank"> <i><img src="images/Linux.png" alt=""></i><em>1</em>
+<p>Linux：20个linux常用命令</p>
+<span class="star5"></span> </a></li>
+<!-- news -->
+<li><a href="essay.html" title="" target="_blank"> <i><img src="images/Java.png" alt=""></i><em>2</em>
+<p>Java 数据结构篇-实现二叉搜索树的核心方法</p>
+<span class="star4"></span> </a></li>
+<!--  news-->
+<li><a href="essay.html" title="" target="_blank"> <i><img src="images/Java.png" alt=""></i><em>3</em>
+<p>Java连接Mysql报错：javax.net.ssl.SSLException: Received fatal alert: internal_error</p>
+<span class="star4"></span> </a></li>
+<!-- news -->
+<li><a href="essay.html" title="" target="_blank"> <i><img src="images/Linux.png" alt=""></i><em>4</em>
+<p>如何远程登录Linux</p>
+<span class="star3"></span> </a></li>
+<!-- news -->
+<li><a href="essay.html" title="" target="_blank"> <i><img src="images/深度学习.png" alt=""></i><em>5</em>
+<p>深度学习知识点全面总结</p>
+<span class="star2"></span> </a></li>
+
+</ul>
+</div>
+<div class="ad_r"><a href="/"><img src="images/ads4.png" alt="广告图"></a></div>
+<!-- 人气榜 -->
+<div class="hot_news">
+<h2 class="h_title">人气点击</h2>
+<ol start="1">
+<li><a href="/" title="" target="_blank">
+<p>Linux：20个linux常用命令</p>
+</a><span>900</span></li>
+<li><a href="/" title="" target="_blank">
+<p>如何远程登录Linux</p>
+</a><span>798</span></li>
+<li><a href="/" title="" target="_blank">
+<p>【mysql】数据处理格式化、转换、判断</p>
+</a><span>765</span></li>
+<li><a href="/" title="" target="_blank">
+<p>【mysql】数据处理格式化、转换、判断</p>
+</a><span>659</span></li>
+<li><a href="/" title="" target="_blank">
+<p>优秀计算机大学生是怎样炼成的？</p>
+</a><span>640</span></li>
+<li><a href="/" title="" target="_blank">
+<p>身为大学生，你不会还不知道有这些学生福利吧！！！！</p>
+</a><span>503</span></li>
+<li><a href="/" title="" target="_blank">
+<p>网页设计期末作品</p>
+</a><span>500</span></li>
+</ol>
+</div>
+<!-- 评分墙 -->
+<div class="ad_r"><a href="/"><img src="images/ads3.png" alt="广告图"></a></div>
+<div class="tagsclous">
+	
+<h2 class="h_title">你对于Calvin的评价是？</h2>
+<div class="heart" id="heart">
+		    <a href="#" id="one" class="heart-off"></a>
+		    <a href="#" id="two" class="heart-off"></a>
+		    <a href="#" id="three" class="heart-off"></a>
+		    <a href="#" id="four" class="heart-off"></a>
+		    <a href="#" id="five" class="heart-off"></a>
+		</div>
+<h2 class="h_title" >多谢评价！你们的鼓励和批判是我们创作的动力&#128536	</h2>
+</div>
+<div class="emial_box">
+<p>您可以通过以下方式联系我们</p>
+<p>（<b>提议</b>、<b>投诉</b>、<b>合作</b>推荐此方式）</p>
+<p>发送邮件Email到</p>
+<p><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1234567@qq.com" target="_blank">1605853577@qq.com</a></p>
+</div>
+</aside>
+<div class="clear"></div>
+</div>
+<!-- footer -->
+<footer>
+<div class="box">
+<ul class="footer_nav">
+<li><a href="Q&A.html">常见问题</a></li>
+ <li><a href="article.html">隐私条款</a></li>
+ <li><a href="about.html">关于我们</a></li>
+<li><a href="/" target="_blank">访问统计</a></li>
+</ul>
+
+	<h5>创作激励</h5>
+	 <p>充电以激励作者对网站的开发</p>
+	 <div class="image-container" style="width: 100px; margin-left: 550px;">
+	    <img src="images/微信01.png" alt="微信" style="width:45%; height:auto;">
+	     <div class="overlay">
+	       <img src="images/QR.png" alt="支付码" style="width:75%; height:auto;">
+	     </div>
+	     <img src="images/支付平台-支付宝01.png" alt="微信" style="width:65%; height:auto;">
+	 </div>
+	
+<div class="copyright">
+<h5>如何联系我们</h5>
+
+                    <p>
+                    点击：<a href="contact.html"style="color:red;">联系</a></li>
+                    </p>
+</div>
+</div>
+</footer>
+<!-- end footer -->
+<a href="#" title="返回顶部" class="icon-top"></a>
+</body>
+</html>

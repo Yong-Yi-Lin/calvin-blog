@@ -1,0 +1,243 @@
+dt, dd, dl{
+	margin: 0;
+	padding: 0;
+}
+dt, dd{
+	font-weight: 500;
+	display: inline-block;
+}
+button {
+	cursor: pointer;
+}
+
+.confirm_btn {
+	border: none;
+	background: #012684;
+	color: white;
+	padding: 5px 10px;
+	margin-top: -10px; /* 往上移动 10 像素 */
+}
+#button_submit_div{
+	text-align: right;
+	width: 85%;
+	padding-bottom: 8px;
+}
+.time{
+	padding: 0 10px;
+	color: lightslategray;
+}
+#comment_view ul{
+	list-style: none;
+	padding: 0;
+	border-bottom: solid 1px darkblue;
+	/* list-style-type: none; */
+}
+#comment_view ul > li{
+	background-color: #cef0ff;
+}
+#comment_view ul > li:hover{
+
+	background: rgba(0, 0, 0, 0.1);
+}
+#comment_view ul > li{
+	padding: 10px 10px;
+	/*    border-bottom: solid 1px darkblue; */
+	border-bottom-style: double;
+	display: block;
+}
+#comment_view ul > li:last-child{
+	border-bottom: none;
+}
+.cmt_img, .cmt_reply, .cmt_info{
+	display: inline-block;
+	vertical-align: middle;
+}
+.commentator {
+	color: hotpink;
+}
+
+.cmt_reply {
+	float: right;
+	right:65px;
+}
+
+.cmt_reply_btn {
+	border: none;
+	display: none;
+	margin-left: 72px;
+	cursor: pointer;
+}
+
+.cmt_reply_checker {
+	border: none;
+	cursor: pointer;
+}
+
+.thumb_up:after {
+	content: '\2764';
+	font-family: "Segoe Fluent Icons", sans-serif;
+	width: 40px;
+	height: 40px;
+
+	cursor: pointer;
+	margin-left: 4px;
+}
+
+.avatar{
+	display: block;
+}
+main{
+	background: white;
+	vertical-align: top;
+	margin-top: 50px;
+	box-shadow: 2px 0 2px 0 lightgray;
+	display: inline-block;
+}
+/* aside{
+    margin-left: 20px;
+    text-align: center;
+    width: 300px;
+} */
+main{
+	padding: 20px;
+	text-align: left;
+	width: 900px;
+}
+.form_item{
+	padding: 10px 0;
+
+
+}
+.comment-bg{
+	background: #cef0ff;
+	width: 90%;
+}
+.menu > div{
+	display: inline-block;
+	padding: 10px 10px;
+}
+.menu > div:hover{
+	background: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+.menu{
+	margin: 0;
+	padding: 0;
+	background: white;
+	position: absolute;
+	width: 100%;
+	text-align: center
+}
+
+textarea{
+	border: solid 1px #cef0ff;
+	border-radius: 3px;
+}
+
+textarea{
+	margin-left: 9px;
+	padding: 10px;
+	height: 60px;
+	width: 95%;
+	margin-top: 3px;
+}
+/* textarea{
+
+        height: 400px;
+        width: 100%;
+
+ } */
+
+
+.comment {
+	padding: 0 0 0 30px;
+	display: block; margin-top: 8px
+}
+.role_info {
+
+
+}
+.role_name {
+	display: inline-block;
+	margin-left: 18px;
+	margin-top: 5px;
+}
+.role_pic{
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 30px;
+}
+.avatar {
+	border-radius: 100%;
+	vertical-align: top;
+}
+.role_input_box, .role_confirm_btn {
+	display: inline-block;
+
+}
+.role_confirm_btn {
+	height: inherit;
+	border: none;
+	width: 85px;
+	background: #012684;
+	color: white;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+#commentator {
+	border: none;
+	outline-style: none;
+	border-radius: 3px;
+	height: inherit;
+	width: 363px;
+}
+.fake_input_box {
+	border: solid 2px  pink;
+	border-right-style: none;
+	width: 500px;
+	padding: 0 0 0 3px;
+	margin: 0;
+	height: 50px;
+	position: relative;
+	border-radius: 3px;
+
+}
+
+.emoji_trigger_btn {
+	border: none;
+	background: none;
+	font-size: 20px;
+	vertical-align: bottom;
+}
+
+.emoji_board {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 105px;
+	font-size: 25px;
+	padding: 0 15px;
+	background: lightgrey;
+	border-radius: 3px;
+}
+
+.emoji_item {
+	cursor: pointer;
+}
+
+.emoji_board:after {
+	content: "";
+	position: absolute;
+	background-color: white;
+	width: 0;
+	height: 0;
+	top: 4px;
+	right: -20px;
+	border-top: 10px solid transparent;
+	border-left: 10px solid lightgrey;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+#comment_view{
+	width: 90%;
+}

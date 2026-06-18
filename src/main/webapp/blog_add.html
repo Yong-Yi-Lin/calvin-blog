@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑页面</title>
+    <link rel="stylesheet" href="css/common2.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="editor.md/css/editormd.min.css">
+    <link rel="stylesheet" href="css/blog-edit2.css">
+</head>
+<body onload="onloadNav()">
+    <div class="nav">
+        <div class="nav-left">
+            <a class="logo">
+                <img src="images/logo.svg" alt="Homepage" >
+            </a>
+        </div>
+        <div class="nav-right">
+            <img src="apple-touch-icon.png" class="ava-img">
+            <a><span class="username">我的博客</span></a>
+            <a href="my-homepage.html">主页</a>
+            <a href="logout">退出账户</a>
+        </div>
+    </div>
+    <div id="edit-container">
+        <div id="edit-title">
+            <input type="text" id="title" placeholder="在这里写下文章标题" class="es-t" style="border: 1px solid #dedede">
+            <button onclick="addContent()">发布文章</button>
+        </div>
+        <div id="edit-content" style="border-radius: 4px">
+            <textarea id="content" style="display: none;"></textarea>
+        </div>
+    </div>
+</body>
+<script src="js/util.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="editor.md/lib/marked.min.js"></script>
+<script src="editor.md/lib/prettify.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script>
+    $(function(){
+        let editor = editormd("edit-content",{
+            width: "100%",
+            height: "calc(100% - 50px)",
+            markdown: "# 在这里写下第一篇博客",
+            path: "editor.md/lib/",
+            saveHTMLToTextarea: true
+        });
+    })
+
+    let id = window.location.search.substring(4);
+    // if(id != null){
+    //     getBlogContent();
+    // }
+
+    //发布文章点击事件
+    function addContent(){
+        let title = document.querySelector("#title").value;
+        let content = document.querySelector("#content").value;
+        let author = document.querySelector(".username").innerText;
+        ajax({
+            method: "post",
+            url: "blog_add",
+            contentType: "application/json",
+            body: JSON.stringify({
+                title: title,
+                content: content,
+                author:author
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("发布文章成功");
+                        window.location.href = "my-homepage.html";
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+
+
+    //写博客页面将数据库的头像和用户名填充到页面中
+    function  onloadNav(){
+        let avatarImg = document.querySelector(".ava-img");
+        let username = document.querySelector(".username");
+        ajax({
+            method: "Get",
+            url: "UserInfo",
+            contentType: "application/json",
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        let data = json.data;
+                        let user = data.user;
+
+                        if(user.avatar!=null){
+                            avatarImg.src = user.avatar;
+                        }
+                        username.innerText = user.username;
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+
+</script>
+</html>

@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/login_images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav-left {
+    width: 40%;
+    height: 40px;
+    display: flex;
+}
+.nav-left>img {
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+    border-radius: 50%;
+}
+.nav-left>span {
+    margin-left: 10px;
+    line-height: 40px;
+    color: white;
+}
+.nav-right {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+.nav-right>a {
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    line-height: 40px;
+}
+.edit-mode input,
+.edit-mode textarea {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+		
+.edit-mode button {
+	display: block;
+	margin: 10px 0;
+	padding: 5px 10px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}	
+.container {
+    width: 1000px;
+    height: calc(100% - 50px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container-left {
+    width: 200px;
+    height: 100%;
+	/* height: 600px; */
+}
+.container-left .nav{
+    margin: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.container-left .nav a{
+    color: black;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    transition: background .3s, box-shadow .3s;
+	text-decoration: none;
+}
+.container-left .nav a:hover{
+    background: rgba(0, 0, 0, .2);
+	border-radius: 8px;
+}
+.avatar {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+.avatar img {
+	border-radius: 50%;
+	width: 150px; /* 设置合适的宽度 */
+	height: 140px; /* 设置合适的高度 */
+}
+.container-right {
+    width: 795px;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.card {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+	height: 650px;
+}
+.card>img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.card>h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+.card>a {
+    text-decoration: none;
+    color: gray;
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+.editable {
+    cursor: pointer;
+    border-bottom: 1px dashed #999;
+    transition: border-color 0.3s ease;
+}
+
+.editable:hover {
+    border-color: #333;
+}
+
+.editable[contenteditable="true"] {
+    border-bottom: 1px solid #333;
+    padding: 2px 0;
+}
+
+.col-l-4 {
+    padding: 10px;
+}
+
+.info {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-header {
+	font-weight: bold;
+	color: #555;
+}
+
+/* Optional: Adjust alignment */
+.info span {
+    display: inline-block;
+    vertical-align: middle; /* Adjust as needed */
+}
+
+/* Optional: Add padding or margin to create space */
+.info p {
+    margin: 0;
+}
+.savefix {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.savefix {
+    background-color: #45a049;
+}
+
+/* {
+    margin-top: 30px;
+} */
+
+.wrap {
+    background-color: #fff;
+    padding: 20px;
+	margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.inla {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.inps {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fixps {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fixps {
+    background-color: #45a049;
+}
+
+.cancle {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cancle {
+    background-color: #45a049;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+.savea {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.savea {
+    background-color: #45a049;
+}
+
+.counter {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+.counter>span {
+    text-align: center;
+    width: 60px;
+    margin-top: 12px;
+}
+.row {
+    padding: 20px;
+}
+.detail {
+    padding: 50px 30px;
+}
+.row>.title,.detail>.title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.row>.date,.datail>.date {
+    text-align: center;
+    color: green;
+    margin-top: 20px;
+}
+.row>.desc {
+    text-indent: 2em;
+    margin-top: 15px;
+}
+.detail>.desc>p {
+    text-indent: 2em;
+    margin-top: 15px;
+}
+.row a {
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+    padding: 8px;
+}
+.row>.to-detail {
+    text-align: center;
+    margin-top: 20px;
+}
+.row a:hover {
+    background-color: black;
+    color: white;
+}

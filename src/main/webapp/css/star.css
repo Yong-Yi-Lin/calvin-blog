@@ -1,0 +1,25 @@
+.heart-off,
+.heart-on,
+.heart-hover {
+  text-decoration: none;
+}
+.heart-off:before,
+.heart-on:before,
+.heart-hover:before {
+  content: "\2665";
+}
+.heart-off {
+  color: rgba(150, 150, 150, 0.5);
+}
+.heart-on {
+  color: rgba(255, 0, 0, 0.5);
+}
+.heart-hover {
+  color: rgba(231, 0, 0, 1.0);
+}
+.heart a {
+  font-size: 58px;
+  margin: 8px;}
+.heart {
+  border: solid 2px skyblue;
+}

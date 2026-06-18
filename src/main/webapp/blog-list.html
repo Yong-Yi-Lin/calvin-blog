@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人页面</title>
+   <!-- CSS
+       ================================================== -->
+   <link href="css/base.css" rel="stylesheet">
+   <link href="css/m.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/login1.css">
+   <link rel="stylesheet" href="font/font.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/star.css">
+   <link rel="stylesheet" href="css/loading.css">
+   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="css/blog-edit.css">
+   <link rel="stylesheet" href="editor.md/editormd.min.css">
+     
+    <!-- script
+       ================================================== -->
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script src="js/comm.js"></script>
+      <script src="js/star.js"></script>
+      <script src="js/loading.js"></script>
+      
+</head>
+<body>
+	
+    <div class="nav">
+        <div class="nav-left">
+            <img src="apple-touch-icon.png">
+            <span>我的博客</span>
+        </div>
+        <div class="nav-right">
+			<a href="blog.html" title="">主页</a>
+            <a href="myself.html">个人设置</a>
+            <a href="blog-edit.html">写博客</a>
+            <a href="logout">注销</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <div class="card">
+                <img src="apple-touch-icon.png">
+                <a href="myself.html"><h3>XH学Java</h3></a>
+                <a href="https://blog.csdn.net/qq_58710208?spm=1000.2115.3001.5343">MyCSDN地址</a>
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+                <div class="counter">
+                    <span id="count">2</span>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="row">
+                <div class="title">第一篇博客</div>
+                <div class="date">2022-01-22</div>
+                <div class="desc">
+                    <p>希望大海风平浪静，却常常有狂风和恶浪。希望江河一泻千里，却常常有旋涡和急流，希望生活美满幸福，却常常有悲伤和忧愁。</p>
+                </div>
+                <div class="to-detail">
+					<div style="margin-bottom: 25px; margin-top: 25px;""><a href="blog_content.blog.html" >编辑>></a><br /></div>
+					<div style="margin-bottom: 25px; margin-top: 25px;"><a href="blog_content.blog.html" >删除>></a><br /></div>
+					<div style="margin-bottom: 25px; margin-top: 25px;"><a href="blog_content.blog.html" >显示全文>></a><br /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- loading.html -->
+	 <!-- <div id="modal-overlay" class="modal-overlay">
+	    <div class="sk-cube-grid">
+	      <div class="sk-cube sk-cube-1"></div>
+	      <div class="sk-cube sk-cube-2"></div>
+	      <div class="sk-cube sk-cube-3"></div>
+	      <div class="sk-cube sk-cube-4"></div>
+	      <div class="sk-cube sk-cube-5"></div>
+	      <div class="sk-cube sk-cube-6"></div>
+	      <div class="sk-cube sk-cube-7"></div>
+	      <div class="sk-cube sk-cube-8"></div>
+	      <div class="sk-cube sk-cube-9"></div>
+	      <p>Loading.....</p>
+	    </div>
+	  </div> -->
+</body>
+<script src="js/util.js"></script>
+<script>
+    //客户端展示页面时，就需要展示文章列表数据
+    //加载完页面，就发送ajax请求获取文章列表的数据
+    //返回响应执行回调时，解析响应的文章列表数据
+    ajax({
+        method: "get",
+        url: "blog_list",
+        callback: function(status,responseText){
+            if(status == 200){
+                let json = JSON.parse(responseText);
+                if(json.ok){
+                    let data = json.data;
+                    let nickname = data.nickname;
+                    let h3 = document.querySelector(".card>h3");
+                    h3.innerHTML = nickname;
+                    let articles = data.articles;
+                    let div = document.querySelector(".container-right");
+                    //str不赋值就是undefined，再去拼接字符串就会出错
+                    let str = "";
+                    for(let a of articles){
+                        //``里面可以包括单引号和双引号
+                        str += `<div class="row">`;
+                        str += `<div class="title">`;
+                        str += a.title;
+                        str += `</div>`;
+                        str += `<div class="date">`;
+                        str += a.dateString;
+                        str += `</div>`;
+                        str += `<div class="desc">`;
+                        str += `<p>`;
+                        str += a.content;
+                        str += `</p>`;
+                        str += `</div>`;
+                        str += `<div class="to-detail">`;
+                        str += `<a href="blog_content.html?id=` + a.id;
+                        str += `">显示全文>></a>`;
+                        str += `</div>`;
+                        str += `</div>`;
+                    }
+                    div.innerHTML = str;
+                    let num = data.count;
+                    let count = document.querySelector("#count");
+                    count.innerHTML = num;
+                }else {
+                    alert("ok==false");
+                }
+            }else {
+                alert("响应状态码："+status+"/nbody："+responseText)
+            }
+        }
+    });
+</script>
+</html>

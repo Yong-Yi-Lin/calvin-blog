@@ -1,0 +1,39 @@
+#edit-container {
+    width: 900px;
+    height: calc(100% - 50px);
+    margin: 0 auto;
+}
+#edit-title {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#edit-title>input {
+    width: 89%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+#edit-title>button {
+    width: 10%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    /*background-color: orange;*/
+    color: white;
+    background: linear-gradient(to right, #4da0ff, #2068b5);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#edit-title>button:hover {
+    background: linear-gradient(to right, #3c8dd6, #165692); /* 鼠标悬停时的蓝色渐变背景 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的更大阴影效果 */
+}
+#edit-title>button:active {
+    background-color: gray;
+}

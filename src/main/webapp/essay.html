@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calvin-博客文章</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/m.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login1.css">
+    <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/star.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/essay.css">
+    <!--    js-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/comm.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/essay.js"></script>
+<!--    <script src="js/star.js"></script>-->
+
+    <!-- favicons
+       ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body onload="onloadPage()">
+<!--音乐播放器-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+<script src="https://myhkw.cn/player/js/player.js" id="myhk" key="demo" m="1"></script>
+<header>
+    <div class="box">
+        <nav>
+            <ul id="starlist">
+                <div class="logo"><li><a href="index.html"><img src="images/logo.svg" alt="Homepage"></a></li></div>
+                <li><a href="index.html">首页</a></li>
+                <li ><a href="blog.html">所有内容</a>
+                <li><a href="about.html" title="">关于</a></li>
+                <li ><a href="my-homepage.html" title="">我的</a> </li>
+                <li><div class="role_info">
+                    <img alt="角色" width="25px" class="avatar role_pic" src="images/login.png">
+                    <span id="role_info_name" class="role_name">未登录</span>
+                </div>
+                </li>
+            </ul>
+            <h2 id="mnavh"><span class="navicon"></span></h2>
+            <div class="is-search"> <i></i> </div>
+            <div class="search-page">
+                <div class="search_box">
+                    <div class="go-left"></div>
+                    <div class="search">
+                        <!-- <form action="" method="post" name="searchform" id="searchform"> -->
+                        <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onFocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onBlur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+                        <input name="show" value="title" type="hidden">
+                        <input name="tempid" value="1" type="hidden">
+                        <input name="tbname" value="news" type="hidden">
+                        <!-- <input name="Submit" class="input_submit" value="搜索" type="submit"> -->
+                        <button  class="input_submit" value="搜索" type="submit">搜索</button>
+                        <!-- </form> -->
+                    </div>
+                    </div>
+                    </div>
+        </nav>
+    </div>
+</header>
+<!-- main -->
+<div class="ph_margin"></div>
+<div class="box">
+    <div class="blogs_info_page">
+        <div class="weizhi">您当前的位置：<a href="">首页</a>&nbsp;&gt;&nbsp;<a href="/">文章</a></div>
+        <article class="article">
+            <h1>Linux：20个linux常用命令</h1>
+            <div class="wz_info"> <span>作者：<a href="/" target="_blank">java牛虻</a> </span><span>时间：2023-12-31 11:30:17</span> <span>阅读数：701人阅读</span></div>
+            <div class="content">
+                <p>1. ls：列出文件list</p>
+                <p>2. cd：切换目录change directory</p>
+                <p>3. cp：复制copy</p>
+                <p>4. mv：移动move</p>
+                <p>5. rm：移除，删除remove</p>
+                <p>6. mkdir：创建文件夹make directory</p>
+                <p>7. rmdir：移除，删除文件夹remove directory</p>
+                <p>8. chown：更改所有者change owner</p>
+                <p>9. chmod：更改文件的权限模式change mode</p>
+                <p>10. find：查找</p>
+                <p>11. |：管道</p>
+                <p>12. grep：按行查找并匹配</p>
+                <p>13. tar：打包，压缩，解压</p>
+                <p>14. cat：打印文件内容</p>
+                <p>15. ps：查看进程process select</p>
+                <p>16. kill：杀死进程</p>
+                <p>17. passwd：修改密码password</p>
+                <p>18. pwd：显示工作目录print work directory</p>
+                <p>19. tee：显示并保存</p>
+                <p>20. reboot：重启</p>
+            </div>
+            <button onclick="Thumbsup()" class="diggit">点赞 <b id="diggnum"></b></button>
+            <div class="share"><span>分享到：</span>
+                <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1620626498424">
+                    <a title="分享到QQ好友" href="https://imgcache.qq.com" class="bds_sqq" data-cmd="sqq">
+                    </a> <a title="分享到微信" href="https://wx.qq.com" class="bds_weixin" data-cmd="weixin"></a>
+                    <a title="分享到QQ空间" href="https://qzone.qq.com/" class="bds_qzone" data-cmd="qzone"></a>
+                    <a title="分享到新浪微博" href="https://weibo.com" class="bds_tsina" data-cmd="tsina"></a>
+                    <a href="#" class="bds_more" data-cmd="more"></a> </div>
+            </div>
+            <div class="wz_zhuanzai">
+                <p>本站所有文章、数据、图片均来自互联网,一切版权均归源网站或源作者所有。</p>
+                <p>如果侵犯了你的权益请来信告知我们删除。邮箱：<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=dacesmiling@qq.com" target="_blank">1605853577@qq.com</a></p>
+            </div>
+            <div class="tags">标签：<a href="/" target="_blank">Linux</a><a href="/" target="_blank">基础学习</a></div>
+        </article>
+        <div class="designer">
+            <section><i><img id="authorImg" src="apple-touch-icon.png"></i>
+                <h3 id="authorName">java牛虻</h3>
+                <p id="authorBio">当你还撑不起你的梦想时，就要去奋斗。如果缘分安排我们相遇，请不要让她擦肩而过。我们一起奋斗！</p>
+            </section>
+            <span><a href="blog-list.html" target="_blank" class="read_more">点击了解</a> </span></div>
+        <div class="ad">
+
+        </div>
+        <div class="wz_love">
+            <h2 class="h_title">评论区&#128071</h2>
+            <main onclick="mainCLick(event)" style="text-align: left">
+                <div class="form_item">
+                    <div class="fake_input_box">
+                        <label class="role_input_box">用户：<input id="commentator" placeholder="请登录进行评论..."/></label>
+                        <button onclick="login()" class="role_confirm_btn">登录</button>
+                    </div>
+                </div>
+                <hr/>
+
+                <div class="form_item">
+                    <div class="comment-bg">
+
+                        <textarea id="comment_space" onkeyup="readKey(event)" placeholder="请输入您要评论的内容"></textarea>
+                    </div>
+                </div>
+                <div id="button_submit_div">
+                    <div style="position: relative">
+            <span style="color: lightgray; margin-right: 20px">
+                还可以输入 <span id="char_count">1000</span> 个字符
+            </span>
+                        <button class="confirm_btn" id="cancel_reply" onclick="cancelReply(event, this)" style="margin-right: 20px; display: none">取消回复</button>
+                        <button class="confirm_btn" id="submit_button" onclick="submitTree(event)">提交</button>
+                        <div id="emoji_board" class="emoji_board">
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div id="comment_view">
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 侧栏推荐 -->
+    <aside class="rbox">
+
+
+        <div class="ad_r"><a href="/"><img src="images/ads4.png" alt="广告图"></a></div>
+        <!-- 人气榜 -->
+        <div class="hot_news">
+            <h2 class="h_title">人气点击</h2>
+            <ol start="1">
+                <li><a href="/" title="" target="_blank">
+                    <p>Linux：20个linux常用命令</p>
+                </a><span>900</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>如何远程登录Linux</p>
+                </a><span>798</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>【mysql】数据处理格式化、转换、判断</p>
+                </a><span>765</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>【mysql】数据处理格式化、转换、判断</p>
+                </a><span>659</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>优秀计算机大学生是怎样炼成的？</p>
+                </a><span>640</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>身为大学生，你不会还不知道有这些学生福利吧！！！！</p>
+                </a><span>503</span></li>
+                <li><a href="/" title="" target="_blank">
+                    <p>网页设计期末作品</p>
+                </a><span>500</span></li>
+            </ol>
+        </div>
+
+        <!-- 评分墙 -->
+        <div class="ad_r"><a href="/"><img src="images/ads3.png" alt="广告图"></a></div>
+        <div class="tagsclous">
+
+            <h2 class="h_title">你对于Calvin的评价是？</h2>
+            <div class="heart" id="heart">
+                <a href="#" id="one" class="heart-off"></a>
+                <a href="#" id="two" class="heart-off"></a>
+                <a href="#" id="three" class="heart-off"></a>
+                <a href="#" id="four" class="heart-off"></a>
+                <a href="#" id="five" class="heart-off"></a>
+            </div>
+            <h2 class="h_title" >多谢评价！你们的鼓励和批判是我们创作的动力&#128536	</h2>
+        </div>
+        <div class="emial_box">
+            <p>您可以通过以下方式联系我们</p>
+            <p>（<b>提议</b>、<b>投诉</b>、<b>合作</b>推荐此方式）</p>
+            <p>发送邮件Email到</p>
+            <p><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1605853577@qq.com" target="_blank">1605853577@qq.com</a></p>
+        </div>
+    </aside>
+    <div class="clear"></div>
+</div>
+<!-- footer -->
+<footer>
+    <div class="box">
+        <ul class="footer_nav">
+            <li><a href="Q&A.html">常见问题</a></li>
+            <li><a href="article.html">隐私条款</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="/" target="_blank">访问统计</a></li>
+        </ul>
+
+        <h5>创作激励</h5>
+        <p>充电以激励作者对网站的开发</p>
+        <div class="image-container" style="width: 100px; margin-left: 550px;">
+            <img src="images/微信.png" alt="微信" style="width:40%; height:auto;">
+            <div class="overlay">
+                <img src="images/QR.png" alt="支付码" style="width:40%; height:auto;">
+            </div>
+            <img src="images/支付宝.png" alt="微信" style="width:40%; height:auto;">
+        </div>
+
+        <div class="copyright">
+            <h5>如何联系我们</h5>
+
+            <p>
+                点击：<a href="contact.html"style="color:red;">联系</a></li>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+<a href="#" title="返回顶部" class="icon-top"></a>
+
+<script src="js/star.js"></script>
+<script src="js/util.js"></script>
+<script>
+    //window.location.search获取的是queryString？后的部分，blog_content?id=1
+    //也就是获取的是?id=1
+    let id = window.location.search.substring(4);
+    function onloadPage(){
+        let articleElement = document.querySelector(".article");
+        let share = document.querySelector(".share").outerHTML;
+        let awz_zhuanzai = document.querySelector(".wz_zhuanzai").outerHTML;
+        let tags = document.querySelector(".tags").outerHTML;
+        let avatarImg = document.getElementById("authorImg");
+        let dName = document.getElementById("authorName");
+        let dBio = document.getElementById("authorBio");
+        let ahref = document.querySelector(".read_more");
+        let un = document.getElementById("role_info_name")
+
+        //页面一加载就需要展示博客详情页面，所以就发送ajax请求来获取内容
+        ajax({
+            method: "get",
+            url: "blog_content?id="+id,
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        let data = json.data;
+                        let article = data.article;
+                        let user = data.user;
+                        //let div = document.querySelector(".detail");
+                        let str = "";
+                        str += `<h1>`;
+                        str += article.title;
+                        str += `</h1>`;
+                        str += `<div class="wz_info">`;
+                        str += `<span>作者：`;
+                        str += article.author;
+                        str += `</span><span>&nbsp&nbsp时间：`;
+                        str += article.dateString;
+                        str += `</span> <span>&nbsp阅读数：701人阅读</span></div>`;
+                        str += `<div class="content">`;
+                        str += article.content;
+                        str += `</div>`;
+                        str += `<button class="diggit" onclick="Thumbsup()">`;
+                        str += `点赞(<b id="diggnum">`;
+                        str += article.likeCount;
+                        str += `</b>)`;
+                        str += `</button>`
+                        // diggnum.innerText = article.likeCount;
+                        str += share+awz_zhuanzai+tags;
+                        articleElement.innerHTML = str;
+                        un.innerText = user.username;
+
+                        if(user.avatar!=null){
+                            avatarImg.src = user.avatar;
+                        }
+                        dName.innerText = user.username;
+                        dBio.innerText = user.biography;
+                        ahref.href = "author-homepage.html?id="+user.id;
+
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+
+
+    //点赞功能
+    function Thumbsup(){
+        ajax({
+            method: "post",
+            url: "blog_like?id="+id,
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("点赞成功");
+                        document.getElementById("diggnum").innerText=json.data;
+                    }else {
+                        alert("点赞失败");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+</script>
+<script>
+
+    <!--更新用户名 -->
+    //客户端展示页面时，就需要展示文章列表数据
+    //加载完页面，就发送ajax请求获取文章列表的数据
+    //返回响应执行回调时，解析响应的文章列表数据
+    // 获取头像登录元素
+    var usernameElement = document.getElementById("username");
+    // 创建Ajax请求
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("GET", "UserInfo", true);
+    //
+    // xhr.onreadystatechange = function() {
+    //     if (xhr.readyState === XMLHttpRequest.DONE) {
+    //         if (xhr.status === 200) {
+    //             var responseJson = JSON.parse(xhr.responseText);
+    //
+    //             if (responseJson.ok) {
+    //                 var data = responseJson.data;
+    //                 var username = data.username;
+    //
+    //                 // 更新头像登录的用户名
+    //                 usernameElement.innerText = username;
+    //             } else {
+    //                 alert("ok==false");
+    //             }
+    //         } else {
+    //             alert("响应状态码：" + xhr.status + "\nbody：" + xhr.responseText);
+    //         }
+    //     }
+    // };
+
+    // 发送请求
+    // xhr.send();
+
+</script>
+
+</body>
+</html>

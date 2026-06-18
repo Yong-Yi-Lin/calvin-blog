@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>忘记密码</title>
+		<style>
+			.container {
+				width: 300px;
+				margin: 0 auto;
+				padding: 20px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+			
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			
+			label {
+				margin-top: 10px;
+			}
+			
+			input[type="email"],
+			input[type="text"] {
+				width: 100%;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+			
+			button {
+				padding: 5px 10px;
+				margin-top: 10px;
+			}
+			
+			#v_container {
+				width: 150px;
+				height: 50px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>忘记密码</h2>
+			<form id="forgotPasswordForm">
+				<label for="email">邮箱：</label>
+				<input type="email" id="email" required>
+				<label for="code_input">验证码：</label>
+				<div id="v_container"></div>
+				<input type="text" id="code_input" value="" placeholder="请输入验证码" required>
+				<button type="button" id="refreshCaptcha">刷新验证码</button>
+				<button type="submit">提交</button>
+			</form>
+		</div>
+		<script src="js/gVerify.js"></script>
+		<script>
+			var verifyCode = new GVerify("v_container");
+			
+			document.getElementById("refreshCaptcha").onclick = function(){
+				verifyCode.refresh();
+			}
+			
+			document.getElementById("forgotPasswordForm").onsubmit = function(){
+				var res = verifyCode.validate(document.getElementById("code_input").value);
+				if(res){
+					alert("验证正确");
+				}else{
+					alert("验证码错误");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

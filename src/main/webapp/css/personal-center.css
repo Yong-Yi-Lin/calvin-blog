@@ -1,0 +1,948 @@
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+
+}
+.entire {
+	/* display: flex; */
+	/* justify-content: space-between; */
+	/* position: relative; */
+	margin: 0 auto;
+}
+.head {
+	/* width: 1000px; */
+	/* height: 280px; */
+	/* height: auto; */
+	/* background-color: #ffffff; */
+	position: absolute;
+	top: 12%;
+	left: 25%;
+	/* box-shadow: 0px 0px 5px dimgray; */
+	border-radius: 4px 4px 0px 0px;
+	/* width: 1000px; */
+	width: 58%;
+	height: 170px;
+	background-color: #9196a1;
+	margin: 0 auto;
+	padding: 0;
+	/* position: relative; */
+}
+
+.cover {
+	/* width: 1000px; */
+	width: 100%;
+	height: 170px;
+	background-color: #9196a1;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.cover-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/*z-index: -2;*/
+}
+.avatar1 {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	background-color: #64b6e8;
+	border: 4px solid #ffffff;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.avatar1:hover img{
+	filter: brightness(40%);
+}
+.avatar1:hover::before {
+	content: "修改我的头像";
+
+	position: absolute;
+	color: white;
+	font-size: 17px;
+	text-align: center;
+	margin-left: 17px;
+	line-height: 150px;
+	z-index: 2;
+	opacity: 0; /* 初始时隐藏 */
+	transition: opacity 0.3s ease; /* 添加过渡效果 */
+}
+.avatar1:hover::before {
+	opacity: 1; /* 鼠标悬停时显示 */
+}
+.avatar1 img {
+	/* border-radius: 50%; */
+	width: 150px; /* 设置合适的宽度 */
+	height: 140px; /* 设置合适的高度 */
+	transition: filter 0.3s ease; /* 添加过渡效果 */
+}
+.cover-img {
+	/* width: 1000px; */
+	width: 100%;
+	height: 170px;
+}
+.img1 {
+	/* width: 1000px; */
+	width: 58%;
+	height: 140px;
+}
+.name {
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	font-size: 30px;
+}
+.btn1,.upl-cover {
+	background-color: transparent;
+	position: absolute;
+	left: 85%;
+	top: 35%;
+	height: 40px;
+	width: 120px;
+	margin-top: 35px;
+	padding: 0px;
+	border-radius: 5px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #ffffff;
+}
+.btn1:hover {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+}
+.upl-cover {
+	top: 9%;
+}
+
+
+
+
+/* ======================================= */
+.container {
+	/* width: 1000px;
+	height: 400px;
+	position: relative; */
+	margin: 0 auto;
+}
+.nav-left {
+	position: absolute;
+	top: 31%;
+	left: 25%;
+	/* width: 30%; */
+	/* width: 200px; */
+	width: 12%;
+	height: 700px;
+	border-right: #eff0f0;
+}
+.nav-left ul {
+	/* list-style-type: none; */
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/* height: auto; */
+	/* background-color: #f1f1f1; */
+	background-color: white;
+	/* position: fixed; */
+	height: 100%;
+	/* overflow: auto; */
+	list-style: none;
+	border-radius: 4px;
+}
+
+.nav-left li {
+	/* margin: 0; */
+	/* margin-top: 10px; */
+	padding: 0;
+	border-radius: 4px;
+
+	/*background: linear-gradient(to right, #add8e6, #1772f6);*/
+	/*color: white;*/
+}
+
+.nav-left li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center;
+	transition: background-color 0.3s ease;
+
+}
+
+.nav-left li a.active {
+	/* background-color: #64b6e8; */
+	/*background-color: #9196a1;*/
+	/*background-color: #5fa8e3;*/
+	background: linear-gradient(to right, #add8e6, #1772f6);
+	/*color: white;*/
+	color: black;
+
+	/*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
+}
+.nav-left li a:hover {
+	background: linear-gradient(to right, #5fa8e3, #b3e0ff);
+	/*color: white;*/
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.nav-left li a:hover:not(.active) {
+	/*background-color: #555;*/
+	/*background-color:   #66ccff;*/
+	background: linear-gradient(to right, #5fa8e3, #b3e0ff);
+	/*color: white;*/
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.li-img {
+	margin: 0;
+	/* padding: 0; */
+	padding-right: 12px;
+}
+
+
+
+.info-right {
+	/* width: 800px; */
+	width: 46%;
+	height: 700px;
+	background-color: white;
+	position: absolute;
+	left: 37.1%;
+	top: 31%;
+	border-left: #eff0f0;
+}
+.shu {
+	margin: 0;
+	padding: 0;
+}
+.first {
+	border-bottom: 2px solid #eff0f0;
+	height: 60px;
+}
+.first p {
+	padding-top: 15px;
+	padding-left: 40px;
+	/*width: 400px;*/
+}
+.first a {
+	float: right;
+	margin-right: 50px;
+
+}
+
+table {
+	width: 80%;
+	height: 400px;
+	border-collapse: collapse;
+	background-color: transparent;
+	margin-left: 50px;
+}
+tr{
+	padding: 0;
+	margin: 0;
+	height: 100px;
+}
+td{
+	padding: 0;
+	margin: 0;
+	border-bottom: none;
+}
+
+.zi {
+	margin: 10px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	font-size: 18px;
+	width: 13%;
+	text-align: justify;
+
+}
+.zi::after {
+	border-bottom: none;
+}
+.con {
+	width: 350px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+/*
+input {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100px;
+	border: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+} */
+.ins {
+	border: none !important;
+	padding: 0px;
+	margin: 0;
+	width: 100%;
+	height: 70px;
+}
+/* a {
+	border: none;
+} */
+.avatar {
+	width: 250px;
+	height: 250px;
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: #eff0f0;
+	/*margin-left: 200px;*/
+	float: right;
+	margin-right: 320px;
+	margin-top: 80px;
+	border-radius: 50%;
+	border: 1px #e5e9ef solid;
+	background-color: transparent;
+	position: relative;
+}
+#avatarImg {
+	width: 160px;
+	height: 160px;
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: #eff0f0;
+	/*margin: 10px;*/
+	/*margin-left: 200px;*/
+	/*float: right;*/
+	/*margin-right: 300px;*/
+	/*margin-top: 80px;*/
+	border-radius: 50%;
+	position: absolute; /* 设置绝对定位 */
+	top: 50%; /* 将上边缘定位到父元素的50%高度处 */
+	left: 50%; /* 将左边缘定位到父元素的50%宽度处 */
+	transform: translate(-50%, -50%);
+}
+.savefix,.fixps {
+	border-radius: 8px;
+	width: 80px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 40px;
+	/*background-color: #9196a1;*/
+	/*background-color: #5fa8e3;*/
+	background-color: #3498db;
+	color: white;
+	border: none;
+	margin-left: 260px;
+	margin-right: 0;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.savea,.upload-btn {
+	border-radius: 8px;
+	width: 80px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 40px;
+	/*background-color: #9196a1;*/
+	/*background-color: #5fa8e3;*/
+	background-color: #3498db;
+	color: white;
+	border: none;
+	/* margin-left: 260px; */
+	/* margin-right: 0; */
+	margin-top: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.savefix,.fixps:hover {
+	/* background-color: #00a1d6; */
+	/*background-color: #9196a1;*/
+	/*background-color: #5fa8e3;*/
+	/*background-color: #2077b5 !important;*/
+	color: white;
+	border: none;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.savea:hover {
+	background-color: #2077b5;
+}
+
+.upload-btn {
+	margin-top: 30px;
+	margin-left: 300px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	float: left;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.savea {
+	margin-top: 30px;
+	float: right;
+	margin-right: 320px;
+	/*margin-right: 250px;*/
+}
+.row {
+	/* margin-top: 10px; */
+	padding-top: 30px;
+	/* margin-left: 30px; */
+	padding-left: 40px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+}
+.col-l-6 {
+	width: 60%;
+}
+.inla {
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 5px;
+	/* padding-bottom: 15px; */
+	display: block;
+}
+
+.inps {
+	width: 100%;
+	/* padding: 10px; */
+	padding: 0;
+	font-size: 14px;
+	/* height: 14px; */
+	/* border: 1px solid #ccc; */
+	border: none;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
+
+/* 输入框聚焦样式 */
+.inps:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 提交按钮样式 */
+.submit-btn {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 15px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: #0056b3;
+}
+
+@media screen and (max-width:1710px) and (min-width:1401px) {
+	.entire {
+		/* display: flex; */
+		/* justify-content: space-between; */
+		/* position: relative; */
+		margin: 0 auto;
+	}
+	.head {
+		/* width: 1000px; */
+		/* height: 280px; */
+		/* height: auto; */
+		/* background-color: #ffffff; */
+		position: absolute;
+		top: 12%;
+		left: 25%;
+		/* box-shadow: 0px 0px 5px dimgray; */
+		border-radius: 4px 4px 0px 0px;
+		/* width: 1000px; */
+		width: 58%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0 auto;
+		padding: 0;
+		/* position: relative; */
+	}
+
+	.cover {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0;
+		padding: 0;
+		/* position: absolute; */
+		position: relative;
+	}
+	.cover-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		/*z-index: -2;*/
+	}
+	.cover-img {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+	}
+	.img1 {
+		/* width: 1000px; */
+		width: 90%;
+		height: 140px;
+	}
+	.container {
+		/* width: 1000px;
+		height: 400px;
+		position: relative; */
+		margin: 0 auto;
+	}
+	.nav-left {
+		position: absolute;
+		top: 31%;
+		left: 25%;
+		/* width: 30%; */
+		/* width: 200px; */
+		width: 12%;
+		height: 700px;
+		border-right: #eff0f0;
+	}
+	.info-right {
+		/* width: 800px; */
+		width: 46%;
+		height: 700px;
+		background-color: white;
+		position: absolute;
+		left: 37.1%;
+		top: 31%;
+		border-left: #eff0f0;
+	}
+	.avatar {
+		width: 250px;
+		height: 250px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		margin-left: 250px;
+		float: right;
+		margin-right: 250px;
+		margin-top: 80px;
+		border-radius: 50%;
+		border: 1px #e5e9ef solid;
+		background-color: transparent;
+		position: relative;
+	}
+	#avatarImg {
+		width: 160px;
+		height: 160px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		/*margin: 10px;*/
+		/*margin-left: 200px;*/
+		/*float: right;*/
+		/*margin-right: 300px;*/
+		/*margin-top: 80px;*/
+		border-radius: 50%;
+		position: absolute; /* 设置绝对定位 */
+		top: 50%; /* 将上边缘定位到父元素的50%高度处 */
+		left: 50%; /* 将左边缘定位到父元素的50%宽度处 */
+		transform: translate(-50%, -50%);
+	}
+	.savea,.upload-btn {
+		border-radius: 8px;
+		width: 80px;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		/*background-color: #9196a1;*/
+		/*background-color: #5fa8e3;*/
+		background-color: #3498db;
+		color: white;
+		border: none;
+		margin-top: 10px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea:hover {
+		background-color: #2077b5;
+	}
+
+	.upload-btn {
+		margin-top: 30px;
+		margin-left: 210px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		float: left;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea {
+		margin-top: 30px;
+		float: right;
+		margin-right: 250px;
+		/*margin-right: 250px;*/
+	}
+}
+
+@media screen and (max-width:1400px) and (min-width:951px){
+	.entire {
+		/* display: flex; */
+		/* justify-content: space-between; */
+		/* position: relative; */
+		margin: 0 auto;
+	}
+	.head {
+		/* width: 1000px; */
+		/* height: 280px; */
+		/* height: auto; */
+		/* background-color: #ffffff; */
+		position: absolute;
+		top: 12%;
+		left: 25%;
+		/* box-shadow: 0px 0px 5px dimgray; */
+		border-radius: 4px 4px 0px 0px;
+		/* width: 1000px; */
+		width: 58%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0 auto;
+		padding: 0;
+		/* position: relative; */
+	}
+
+	.cover {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0;
+		padding: 0;
+		/* position: absolute; */
+		position: relative;
+	}
+	.cover-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		/*z-index: -2;*/
+	}
+	.cover-img {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+	}
+	.img1 {
+		/* width: 1000px; */
+		width: 90%;
+		height: 140px;
+	}
+	.btn1,.upl-cover {
+		background-color: transparent;
+		position: absolute;
+		left: 75%;
+		top: 35%;
+		height: 40px;
+		width: 120px;
+		margin-top: 35px;
+		padding: 0px;
+		border-radius: 5px;
+		color: #ffffff;
+		text-align: center;
+		line-height: 40px;
+		border: 1px solid #ffffff;
+	}
+	.btn1:hover {
+		background-color: transparent;
+		border: 1px solid #ffffff;
+	}
+	.upl-cover {
+		top: 9%;
+	}
+	.container {
+		/* width: 1000px;
+		height: 400px;
+		position: relative; */
+		margin: 0 auto;
+	}
+	.nav-left {
+		position: absolute;
+		top: 31%;
+		left: 25%;
+		/* width: 30%; */
+		/* width: 200px; */
+		width: 12%;
+		height: 700px;
+		border-right: #eff0f0;
+	}
+	.info-right {
+		/* width: 800px; */
+		width: 46%;
+		height: 700px;
+		background-color: white;
+		position: absolute;
+		left: 37.1%;
+		top: 31%;
+		border-left: #eff0f0;
+	}
+	.avatar {
+		width: 250px;
+		height: 250px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		margin-left: 100px;
+		float: right;
+		margin-right: 150px;
+		margin-top: 80px;
+		border-radius: 50%;
+		border: 1px #e5e9ef solid;
+		background-color: transparent;
+		position: relative;
+	}
+	#avatarImg {
+		width: 160px;
+		height: 160px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		/*margin: 10px;*/
+		/*margin-left: 200px;*/
+		/*float: right;*/
+		/*margin-right: 300px;*/
+		/*margin-top: 80px;*/
+		border-radius: 50%;
+		position: absolute; /* 设置绝对定位 */
+		top: 50%; /* 将上边缘定位到父元素的50%高度处 */
+		left: 50%; /* 将左边缘定位到父元素的50%宽度处 */
+		transform: translate(-50%, -50%);
+	}
+	.savea,.upload-btn {
+		border-radius: 8px;
+		width: 80px;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		/*background-color: #9196a1;*/
+		/*background-color: #5fa8e3;*/
+		background-color: #3498db;
+		color: white;
+		border: none;
+		/* margin-left: 260px; */
+		/* margin-right: 0; */
+		margin-top: 10px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea:hover {
+		background-color: #2077b5;
+	}
+
+	.upload-btn {
+		margin-top: 30px;
+		margin-left: 100px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		float: left;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea {
+		margin-top: 30px;
+		float: right;
+		margin-right: 190px;
+		/*margin-right: 250px;*/
+	}
+}
+@media screen and (max-width:950px){
+	.entire {
+		/* display: flex; */
+		/* justify-content: space-between; */
+		/* position: relative; */
+		margin: 0 auto;
+	}
+	.head {
+		/* width: 1000px; */
+		/* height: 280px; */
+		/* height: auto; */
+		/* background-color: #ffffff; */
+		position: absolute;
+		top: 12%;
+		left: 2%;
+		/* box-shadow: 0px 0px 5px dimgray; */
+		border-radius: 4px 4px 0px 0px;
+		/* width: 1000px; */
+		width: 90%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0 3%;
+		padding: 0;
+		/* position: relative; */
+	}
+
+	.cover {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+		background-color: #9196a1;
+		margin: 0;
+		padding: 0;
+		/* position: absolute; */
+		position: relative;
+	}
+	.cover-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		/*z-index: -2;*/
+	}
+	.cover-img {
+		/* width: 1000px; */
+		width: 100%;
+		height: 170px;
+	}
+	.img1 {
+		/* width: 1000px; */
+		width: 90%;
+		height: 140px;
+	}
+	.btn1,.upl-cover {
+		background-color: transparent;
+		position: absolute;
+		left: 80%;
+		top: 35%;
+		height: 40px;
+		width: 120px;
+		margin-top: 35px;
+		padding: 0px;
+		border-radius: 5px;
+		color: #ffffff;
+		text-align: center;
+		line-height: 40px;
+		border: 1px solid #ffffff;
+	}
+	.btn1:hover {
+		background-color: transparent;
+		border: 1px solid #ffffff;
+	}
+	.upl-cover {
+		top: 9%;
+	}
+	.container {
+		/* width: 1000px;
+		height: 400px;
+		position: relative; */
+		margin: 0 auto;
+	}
+	.nav-left {
+		position: absolute;
+		top: 31%;
+		left: 2%;
+		/* width: 30%; */
+		/* width: 200px; */
+		width: 20%;
+		height: 700px;
+		border-right: #eff0f0;
+		margin: 0 3%;
+	}
+	.info-right {
+		/* width: 800px; */
+		width: 70%;
+		height: 700px;
+		background-color: white;
+		position: absolute;
+		left: 25%;
+		top: 31%;
+		border-left: #eff0f0;
+	}
+	.avatar {
+		width: 250px;
+		height: 250px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		/*margin-left: 200px;*/
+		float: right;
+		margin-right: 230px;
+		margin-top: 80px;
+		border-radius: 50%;
+		border: 1px #e5e9ef solid;
+		background-color: transparent;
+		position: relative;
+	}
+	#avatarImg {
+		width: 160px;
+		height: 160px;
+		border: 2px solid white;
+		border-radius: 5px;
+		background-color: #eff0f0;
+		/*margin: 10px;*/
+		/*margin-left: 200px;*/
+		/*float: right;*/
+		/*margin-right: 300px;*/
+		/*margin-top: 80px;*/
+		border-radius: 50%;
+		position: absolute; /* 设置绝对定位 */
+		top: 50%; /* 将上边缘定位到父元素的50%高度处 */
+		left: 50%; /* 将左边缘定位到父元素的50%宽度处 */
+		transform: translate(-50%, -50%);
+	}
+	.savea,.upload-btn {
+		border-radius: 8px;
+		width: 80px;
+		height: 40px;
+		/* margin: 0; */
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		/*background-color: #9196a1;*/
+		/*background-color: #5fa8e3;*/
+		background-color: #3498db;
+		color: white;
+		border: none;
+		/* margin-left: 250px; */
+		/* margin-right: 0; */
+		margin-top: 10px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea:hover {
+		background-color: #2077b5;
+	}
+
+	.upload-btn {
+		margin-top: 30px;
+		margin-left: 160px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		transition: background-color 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		float: left;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	.savea {
+		margin-top: 30px;
+		float: right;
+		margin-right: 250px;
+		/*margin-right: 250px;*/
+	}
+}

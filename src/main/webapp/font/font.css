@@ -1,0 +1,30 @@
+@font-face {
+	font-family: "font1";
+	src: url("HeFengShuDaoZhaoHeFeiLongTi-Shan(GEETYPE-FeilongGBT-Flash)-2.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "font2";
+	src: url("ZiWanGeTeHeiBaiWuChang-MianFei-ChaoHei(Joyfont-GhostsGB-free-Heavy)-2.ttf");
+}
+
+@font-face {
+	font-family: "font3";
+	src: url("AaYouLongXingShu-2.ttf");
+}
+
+@font-face {
+	font-family: "font4";
+	src: url("DuanNingMaoBiXingYiTi-2.ttf");
+}
+
+@font-face {
+	font-family: "font5";
+	src: url("AaJiuZhongXiao-2.ttf");
+}
+@font-face {
+	font-family: "font6";
+	src: url("HYPangDunDunW-2.ttf");
+}

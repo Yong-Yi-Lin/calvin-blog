@@ -1,0 +1,62 @@
+ .f-container {
+	     position: relative;
+	     max-width: 850px;
+	     background: #fff;
+	     padding: 20px 50px;
+	     box-shadow: 0 5px 20px rgba(167, 167, 167, 0.2);
+	     perspective: 2700px;
+	     border-radius: 8px;
+	 }
+	   
+	   h2 {
+	   	text-align: center;
+		width: 100%;
+	   }
+	   
+	   form {
+	   	display: flex;
+	   	flex-direction: column;
+		width: 250px;
+	   }
+	   
+	   label {
+	   	margin-top: 10px;
+	   }
+	   
+	   input[type="email"],
+	   input[type="text"] {
+	   	width: 100%;
+	   	padding: 10px;
+	   	margin-bottom: 10px;
+		 outline-style: none ;
+		 border: 1px solid #ccc; 
+		box-shadow: 0 0 10px rgba(85, 196, 255, 0.2);
+			border-radius: 3px;
+	
+	   }
+	   
+	   button {
+	   	color: #fff;
+	   	  background: #00aaff;
+	   	    border-radius: 6px;
+	   	    padding: 10px;
+	   	    cursor: pointer;
+	   	    transition: all 0.4s ease;
+			width: 100%;
+	   	}
+	
+	   button:hover {
+	     background: #0055ff;
+	   }
+	   #v_container {
+	   	width: 150px;
+	   	height: 50px;
+	   	margin-bottom: 10px;
+	   }
+	   .text-link:hover {
+	     color: #0055ff;
+	   }
+	   .text-link{
+		  float: right;
+		   color: black;
+	   }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> 找回密码 </title>
+    <link rel="stylesheet" href="./css/login.css">
+	<link rel="stylesheet" href="css/loading.css">
+	<link rel="stylesheet" href="css/forget.css">
+	
+	<script src="js/loading.js"></script>
+		<script src="js/forget.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicons
+	================================================== -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+   </head>
+   
+<body>
+	
+	  <header class="l-header">
+	              <ul class="l-header__nav">
+	                  <li ><a href="index.html" title="">返回首页</a></li>
+	                  </ul> <!-- end s-header__nav -->
+	  			</header>
+	  <div id="logo">
+	     <img src="images/logo.svg" alt="Homepage">
+	  </div>
+ <div class="f-container">
+	 
+	
+	 	<form id="forgotPasswordForm">
+			 <h2>忘记密码</h2>
+	 		<label for="email"  > <i class="fas fa-envelope"></i>邮箱：</label>
+	 		<input type="email" id="email"placeholder="请输入邮箱号" required>
+	 		<label for="code_input"> <i class="fas fa-code"></i>验证码：</label>
+	 		<div id="v_container"></div>
+	 		<input type="text" id="code_input" value="" placeholder="请输入验证码" required>
+	 		<button type="submit">提交</button>
+			<div class="text"><a href="login.html" class="text-link" >返回登录/注册</a></div>
+	 	</form>
+	 </div>
+	 
+ </div>
+  <div id="content_bottom">
+      <div>
+          <a href="about.html">关于我们</a>
+          <a href="index.html">博客</a>
+          <a href="Q&A.html">常见问题</a>
+          <a href="article.html">条款</a>
+          <a href="article.html">隐私条款</a>
+      </div>
+      <div>
+          <span >© 2023 Calvin</span>
+          <a href="#">粤 ICP 证 110745 号</a>
+          <img src="img/ga.png" alt="">
+          <a href="#">粤公网安备 11010802010035 号</a>
+          <a href="#">出版物经营许可证</a>
+      </div>
+      <div>
+          <a href="#">侵权举报</a>
+          <a href="#">网上有害信息举报专区</a>
+          <a href="#">儿童色情信息举报专区</a>
+          <span>违法和不良信息举报：010-82716601</span>
+      </div>
+<script src="js/gVerify.js"></script>
+// 验证码
+	 <script>
+	 	var verifyCode = new GVerify("v_container");
+	 	
+	 	document.getElementById("refreshCaptcha").onclick = function(){
+	 		verifyCode.refresh();
+	 	}
+	 	
+	 	document.getElementById("forgotPasswordForm").onsubmit = function(){
+	 		var res = verifyCode.validate(document.getElementById("code_input").value);
+	 		if(res){
+	 			alert("验证正确");
+	 		}else{
+	 			alert("验证码错误");
+	 			return false;
+	 		}
+	 	}
+	 </script>
+
+</body>
+</html>

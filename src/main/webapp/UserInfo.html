@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面</title>
+    <link rel="stylesheet" href="css/myself.css">
+</head>
+<body>
+<div class="nav">
+    <div class="nav-left">
+        <img src="./img/18.jpg">
+        <span>我的博客</span>
+    </div>
+    <div class="nav-right">
+        <a href="blog_list.html">主页</a>
+        <a href="blog_edit.html">写博客</a>
+        <a href="logout">注销</a>
+    </div>
+</div>
+<div class="container">
+    <div class="container-left">
+        <div class="card">
+            <div class="avatar">
+                <img id="avatarImg" src="./img/18.jpg" title="Chien_W"/>
+                <input type="file" id="avatarInput" style="display: none;">
+            </div>
+            <h3>XH学Java</h3>
+            <a href="https://blog.csdn.net/qq_58710208?spm=1000.2115.3001.5343">MyCSDN地址</a>
+            <div class="counter">
+                <span>文章</span>
+                <span>分类</span>
+            </div>
+            <div class="counter">
+                <span id="count">2</span>
+                <span>1</span>
+            </div>
+            <nav class="nav">
+                <a href="#info">基本资料</a>
+                <a href="#avatars" onclick="changeAvatar()">修改头像</a>
+                <a href="#passwords" onclick="changePassword()">密码管理</a>
+            </nav>
+        </div>
+    </div>
+    <!-- 右边栏 -->
+    <div class="container-right">
+        <div class="row">
+            <main>
+                <section id="info">
+                    <div class="wrap">
+                        <h2 class="title">个人资料</h2>
+                        <div class="row">
+                            <div class="col-l-4">
+                                <p class="info">昵称：&nbsp;&nbsp;&nbsp;&nbsp;<span id="nickname" class="editable" contenteditable="false">zombie</span></p>
+                                <p class="info">用户名：&nbsp;&nbsp;&nbsp;&nbsp;<span id="username" class="editable" contenteditable="false">123456</span></p>
+                            </div>
+                            <div class="col-l-4">
+                                <p class="info">博客：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="blog" class="editable" contenteditable="false">https://zombie.com</span></p>
+                                <p class="info">邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="email" class="editable" contenteditable="false">@example.com</span></p>
+                            </div>
+                            <div class="col-l-4">
+                                <p class="info">个人简介：<span id="bio" class="editable" contenteditable="false">我爱计算机，爱的要疯了！</span></p>
+                            </div>
+                        </div>
+                        <button onclick="toggleEditMode()" id="edit"  class="savefix">编辑</button>
+                        <button class="savefix" id="saveChangesBtn" onclick="saveChanges()">提交</button>
+                    </div>
+                </section>
+                <section id="avatars">
+                    <div class="wrap">
+                        <h2 class="title">修改头像</h2>
+                        <div class="row">
+                            <div class="col-l-12">
+                                <div class="avatar">
+                                    <img id="avatarImg" src="./img/18.jpg" title="Chien_W" alt="当前头像">
+                                    <input type="file" id="avatarInput" style="display: none;">
+                                </div>
+                                <label for="avatarInput" class="upload-btn">选择新头像</label>
+                                <button onclick="saveAvatar()" class="savea">保存头像</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="passwords">
+                    <div class="wrap">
+                        <h2 class="title">密码管理</h2>
+                        <div class="row">
+                            <div class="col-l-6">
+                                <label for="currentPassword" class="inla">当前密码：<br></label>
+                                <input type="password" id="currentPassword" name="currentPassword" onblur="checkSame()" class="inps" required>
+                            </div>
+                            <div class="col-l-6">
+                                <label for="newPassword" class="inla">新密码：<br></label>
+                                <input type="password" id="newPassword" name="newPassword" class="inps" required>
+                            </div>
+                        </div>
+                        <button onclick="changePassword()" class="fixps">修改密码</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/util.js"></script>
+<script>
+    ajax({
+        method: "Get",
+        url: "UserInfo",
+        callback: function(status,responseText){
+            if(status == 200){
+                let json = JSON.parse(responseText);
+                if(json.ok){
+                    let data = json.data;
+                    let username = data.username;
+                    let nickname = data.nickname;
+                    let Email = data.Email;
+                    let Biography = data.Biography;
+                    let un = document.getElementById("username");
+                    un.innerHTML = username;
+                    let nk = document.getElementById("nickname");
+                    nk.innerHTML = nickname;
+                    let email = document.getElementById("email");
+                    email.innerHTML = Email;
+                    let bio = document.getElementById("bio");
+                    bio.innerHTML = Biography;
+                }else {
+                    alert("ok==false");
+                }
+            }else {
+                alert("响应状态码："+status+"/nbody："+responseText)
+            }
+        }
+    });
+
+    function toggleEditMode() {
+        let elements = document.getElementsByClassName("editable");
+        let saveChangesBtn = document.getElementById("saveChangesBtn");
+        let edit = document.getElementById("edit");
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].contentEditable = !elements[i].isContentEditable;
+        }
+
+        edit.style.display = "none";
+        saveChangesBtn.style.display = "";
+    }
+
+    function saveChanges() {
+        // 实现保存更改
+        let username = document.getElementById("username").innerText;
+        let nickname = document.getElementById("nickname").innerText;
+        let email = document.getElementById("email").innerText;
+        let bio = document.getElementById("bio").innerText;
+
+        ajax({
+            method: "Post",
+            url: "UserInfoEdit",
+            contentType: "application/json",
+            body: JSON.stringify({
+                username:username,
+                nickname:nickname,
+                email:email,
+                biography:bio
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("修改用户信息成功");
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+
+    function checkSame(){
+        let cp = document.getElementById("currentPassword");
+        let currentPassword = cp.value;
+        ajax({
+            method: "Post",
+            url: "CheckServlet",
+            contentType: "application/json",
+            body: JSON.stringify({
+                password:currentPassword
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("验证成功");
+                    }else {
+                        alert("当前输入的密码有误!");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText)
+                }
+            }
+        });
+    }
+
+
+
+    function changePassword() {
+        let cp = document.getElementById("currentPassword");
+        let np = document.getElementById("newPassword");
+        let currentPassword = cp.value;
+        let newPassword = np.value;
+
+        if (currentPassword == newPassword) {
+            alert("当前密码和新密码一致！")
+        }else {
+            ajax({
+                method: "Post",
+                url: "UserPassword",
+                contentType: "application/json",
+                body: JSON.stringify({
+                    password: newPassword
+                }),
+                callback: function (status, responseText) {
+                    if (status == 200) {
+                        let json = JSON.parse(responseText);
+                        if (json.ok) {
+                            alert("修改密码成功");
+                        } else {
+                            alert("ok == false");
+                        }
+                    } else {
+                        alert("响应状态码：" + status + "/nbody：" + responseText)
+                    }
+                }
+            });
+        }
+    }
+</script>
+
+</html>
