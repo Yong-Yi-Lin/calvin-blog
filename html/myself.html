@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面</title>
+    <link rel="stylesheet" href="css/myself.css">
+	<!-- <link href="static/kico.css" rel="stylesheet" type="text/css"/> -->
+	<!-- <link href="static/paul.css" rel="stylesheet" type="text/css"/> -->
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <img src="apple-touch-icon.png">
+            <span>我的博客</span>
+        </div>
+        <div class="nav-right">
+            <a href="blog_list.html">主页</a>
+            <a href="blog_edit.html">写博客</a>
+            <a href="logout">注销</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <div class="card">
+				<div class="avatar">
+				    <img id="avatarImg" src="apple-touch-icon.png" title="Chien_W"/>
+				    <input type="file" id="avatarInput" style="display: none;">
+				</div>
+                <h3>XH学Java</h3>
+                <a href="https://blog.csdn.net/qq_58710208?spm=1000.2115.3001.5343">MyCSDN地址</a>
+                <div class="counter">
+                    <span>文章</span>
+                    <span>分类</span>
+                </div>
+                <div class="counter">
+                    <span id="count">2</span>
+                    <span>1</span>
+                </div>
+				<nav class="nav">
+				    <a href="#info" onclick="toggleEditMode()" >基本资料</a>
+				    <a href="#avatars" onclick="changeAvatar()">修改头像</a>
+				    <a href="#passwords" onclick="changePassword()">密码管理</a>
+				    <a href="#cancleInfo" onclick="logout()">注销账号</a>
+				    <a href="#languages" onclick="toggleLanguage()">语言</a>
+				</nav>	
+            </div>
+        </div>	
+		<!-- 右边栏 -->
+        <div class="container-right">
+            <div class="row">
+				<main>
+				    <section id="info">
+				        <div class="wrap">
+				            <h2 class="title">个人资料</h2>
+				            <div class="row">
+				                <div class="col-l-4">
+				                    <p class="info">昵称：&nbsp;&nbsp;&nbsp;&nbsp;<span id="nickname" class="editable" contenteditable="false">zombie</span></p>
+				                    <p class="info">id：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="userId" class="editable" contenteditable="false">123456</span></p>
+				                </div>
+				                <div class="col-l-4">
+				                    <p class="info">GitHub：&nbsp;<span id="github" class="editable" contenteditable="false">https://github.com/zombie</span></p>
+				                    <p class="info">博客：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="blog" class="editable" contenteditable="false">https://zombie.com</span></p>
+				                    <p class="info">邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="email" class="editable" contenteditable="false">@example.com</span></p>
+				                </div>
+				                <div class="col-l-4">
+				                    <p class="info">个人简介：<span id="bio" class="editable" contenteditable="false">我爱计算机，爱的要疯了！</span></p>
+				                </div>
+				            </div>
+				            <button id="saveChangesBtn" onclick="saveChanges()" class="savefix">保存更改</button>
+				        </div>
+				    </section>
+				    <section id="avatars">
+				        <div class="wrap">
+							<h2 class="title">修改头像</h2>
+							        <div class="row">
+							            <div class="col-l-12">
+							                <div class="avatar">
+							                    <img id="avatarImg" src="static/img/me.jpg" title="Chien_W" alt="当前头像">
+							                    <input type="file" id="avatarInput" style="display: none;">
+							                </div>
+							                <label for="avatarInput" class="upload-btn">选择新头像</label>
+							                <button onclick="saveAvatar()" class="savea">保存头像</button>
+							            </div>
+							        </div>
+				        </div>
+				    </section>
+				
+				    <section id="passwords">
+				        <div class="wrap">
+							<h2 class="title">密码管理</h2>
+							<div class="row">
+								<div class="col-l-6">
+							        <label for="currentPassword" class="inla">当前密码：<br></label>
+							        <input type="password" id="currentPassword" name="currentPassword" class="inps" required>
+							    </div>
+							    <div class="col-l-6">
+							        <label for="newPassword" class="inla">新密码：<br></label>
+							        <input type="password" id="newPassword" name="newPassword" class="inps" required>
+							    </div>
+							</div>
+							<button onclick="changePassword()" class="fixps">修改密码</button>
+				        </div>
+				    </section>
+				    <section id="cancleInfo">
+				        <div class="wrap">
+							<h2 class="title">注销账号</h2>
+							        <p class="info">
+							            确定要注销账号吗？这将永久删除您的账号及相关信息。
+							        </p>
+							        <button onclick="confirmLogout()" class="cancle">确认注销</button>
+				        </div>
+				    </section>
+				</main>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script src="js/util.js"></script> -->
+<script src="static/kico.js"></script>
+<script src="static/paul.js"></script>
+<script>
+    function toggleEditMode() {
+        let elements = document.getElementsByClassName("editable");
+        let saveChangesBtn = document.getElementById("saveChangesBtn");
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].contentEditable = !elements[i].isContentEditable;
+        }
+
+        saveChangesBtn.style.display = saveChangesBtn.style.display === "none" ? "block" : "none";
+    }
+
+    function toggleLanguage() {
+        // 实现语言切换
+        alert("Implement the language toggle functionality.");
+    }
+
+    function saveChanges() {
+        // 实现保存更改
+        let elements = document.getElementsByClassName("editable");
+
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].contentEditable = false;
+        }
+
+        let saveChangesBtn = document.getElementById("saveChangesBtn");
+        saveChangesBtn.style.display = "none";
+    }
+</script>
+<script>
+        function changePassword() {
+            let currentPassword = document.getElementById('currentPassword').value;
+            let newPassword = document.getElementById('newPassword').value;
+            // 将代码替换成发送请求至服务器的逻辑
+			//演示
+            alert('当前密码：' + currentPassword + '\n新密码：' + newPassword);
+        }
+    </script>
+	<script>
+	    function confirmLogout() {
+	        let isConfirmed = confirm("确定要注销账号吗？这将永久删除您的账号及相关信息。");
+	        if (isConfirmed) {
+	            //添加注销逻辑
+				//演示
+	            alert("账号已注销！");
+	        }
+	    }
+	</script>
+	 <script>
+	        function saveAvatar() {
+	            let fileInput = document.getElementById('avatarInput');
+	            let avatarImg = document.getElementById('avatarImg');
+	
+	            // 获取用户选择的文件
+	            let file = fileInput.files[0];
+	
+	            if (file) {
+	                // 创建一个 FileReader 对象来读取文件
+	                let reader = new FileReader();	
+	                reader.onload = function (e) {
+	                    // 将读取到的文件内容设置为新头像的 src
+	                    avatarImg.src = e.target.result;
+	
+	                    // 同时更新其他位置的头像
+	                    updateOtherAvatar(e.target.result);
+	                };
+	                // 读取文件内容
+	                reader.readAsDataURL(file);
+	            }
+	        }
+	
+	        function updateOtherAvatar(newAvatarSrc) {
+	            // 获取其他位置的头像元素，并更新其 src 属性
+	            let otherAvatar1 = document.getElementById('otherAvatar1');
+	            let otherAvatar2 = document.getElementById('otherAvatar2');
+	
+	            if (otherAvatar1 && otherAvatar2) {
+	                otherAvatar1.src = newAvatarSrc;
+	                otherAvatar2.src = newAvatarSrc;
+	            }
+	        }
+	    </script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑页面</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog-edit.css">
+    <link rel="stylesheet" href="editor.md/editormd.min.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-left">
+            <img src="img/18.jpg">
+            <span>我的博客</span>
+        </div>
+        <div class="nav-right">
+            <a href="blog_list.html">主页</a>
+            <a href="blog_edit.html">写博客</a>
+            <a href="logout">注销</a>
+        </div>
+    </div>
+    <div id="edit-container">
+        <div id="edit-title">
+            <input type="text" id="title" placeholder="在这里写下文章标题">
+            <button onclick="addContent()">发布文章</button>
+        </div>
+        <div id="edit-content">
+            <textarea id="content" style="display: none;"></textarea>
+        </div>
+    </div>
+</body>
+<script src="js/util.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="editor.md/lib/marked.min.js"></script>
+<script src="editor.md/lib/prettify.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script>
+    $(function(){
+        var editor = editormd("edit-content",{
+            width: "100%",
+            height: "calc(100% - 50px)",
+            markdown: "# 在这里写下第一篇博客",
+            path: "editor.md/lib/",
+            saveHTMLToTextarea: true
+        });
+    })
+    //发布文章点击事件
+    function addContent(){
+        let title = document.querySelector("#title").value;
+        let content = document.querySelector("#content").value;
+        ajax({
+            method: "post",
+            url: "blog_add",
+            contentType: "application/json",
+            body: JSON.stringify({
+                title: title,
+                content: content
+            }),
+            callback: function(status,responseText){
+                if(status == 200){
+                    let json = JSON.parse(responseText);
+                    if(json.ok){
+                        alert("发布文章成功");
+                        window.location.href = "blog_list.html";
+                    }else {
+                        alert("ok == false");
+                    }
+                }else {
+                    alert("响应状态码："+status+"/nbody："+responseText);
+                }
+            }
+        });
+    }
+</script>
+</html>

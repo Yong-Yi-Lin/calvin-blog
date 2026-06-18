@@ -1,0 +1,30 @@
+#edit-container {
+    width: 900px;
+    height: calc(100% - 50px);
+    margin: 0 auto;
+}
+#edit-title {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#edit-title>input {
+    width: 89%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+#edit-title>button {
+    width: 10%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+}
+#edit-title>button:active {
+    background-color: gray;
+}
